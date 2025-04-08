@@ -1,0 +1,114 @@
+/* Centrado en toda la pantalla */
+.formulario-contacto {
+  background: #f7f3ed;
+  padding: 60px 20px;
+  font-family: 'Segoe UI', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Contenedor principal */
+.container-form {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+/* Tarjeta blanca con el formulario */
+.tarjeta-contacto {
+  position: relative;
+  background: white;
+  padding: 40px 30px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  flex: 1 1 350px;
+  border-radius: 10px;
+}
+
+/* Logo */
+.logo-ishume {
+  position: absolute;
+  top: -40px;
+  left: -40px;
+  width: 80px;
+  height: auto;
+}
+
+/* Inputs */
+.formulario label {
+  display: block;
+  margin-bottom: 5px;
+  color: #332e2b;
+}
+
+.formulario input,
+.formulario textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+}
+
+/* Botones */
+.botones-form {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.formulario button {
+  background: #ff7215;
+  border: none;
+  padding: 10px 20px;
+  color: white;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.formulario button:hover {
+  background: #e05f00;
+}
+
+/* Texto al costado */
+.texto-lateral {
+  flex: 1 1 300px;
+  color: #444;
+}
+
+.redes {
+  list-style: none;
+  padding-left: 0;
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.icon-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+}
+
+.redes svg {
+  width: 28px;
+  height: 28px;
+  transition: transform 0.3s ease;
+}
+
+.redes a:hover svg {
+  transform: scale(1.2);
+}
+
+.tooltip {
+  display: none;
+}
