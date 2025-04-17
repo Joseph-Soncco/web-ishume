@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacto - ISHUME Productora Audiovisual</title>
+  <meta name="description"
+    content="Contáctanos para cotizaciones y proyectos de fotografía y producción audiovisual profesional">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+  <!-- Google Fonts (incluye Montserrat para el navbar) -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Playfair+Display:wght@700;800&display=swap"
+    rel="stylesheet">
+
+  <!-- Estilos personalizados -->
+  <link rel="stylesheet" href="../public/css/contactos.css">
+
+  <!-- Favicon -->
+  <link rel="icon" href="../public/uploads/img-servicios/icon-is.png">
+</head>
+
+<body>
+  <!-- NAVBAR -->
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="../index.html">
+          <span class="logo-brand">ISHUME</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="/views/servicios.html">Servicios</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/views/portafolio.html">Portafolio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="/views/contacto.html">Contacto</a>
+            </li>
+          </ul>
+          <div class="social-icons d-none d-lg-flex">
+            <a href="https://www.facebook.com/share/1RpNuWeJy7/" target="_blank" class="social-icon"><i
+                class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/ishume_productora_audiovisual?igsh=aGlzeWxvbG1tczc4" target="_blank"
+              class="social-icon"><i class="fab fa-instagram"></i></a>
+            <a href="https://web.whatsapp.com/send/?phone=51991157028&" class="social-icon"><i
+                class="fab fa-whatsapp"></i></a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- HERO SECTION CONTACTO CON FORMULARIO -->
+  <section class="contact-hero-with-form">
+    <div class="hero-video-overlay"></div>
+    <video autoplay muted loop class="hero-video">
+      <source src="/public/videos/hero-background.mp4" type="video/mp4">
+    </video>
+    <div class="container h-100">
+      <div class="row h-100 align-items-center">
+        <div class="col-lg-4">
+          <h1 class="hero-title">Contáctanos para tu <span> próximo proyecto</span></h1>
+          <p class="hero-subtitle">Completa el formulario y nos pondremos en contacto contigo a la brevedad</p>
+        </div>
+        <div class="col-lg-8">
+          <div class="hero-form-container">
+            <div class="contact-form">
+              <h3>Envíanos un mensaje</h3>
+              <form>
+                <div class="form-group">
+                  <label for="nombre">Nombre completo</label>
+                  <input type="text" id="nombre" class="form-control" placeholder="Ingresa tu nombre" required>
+                </div>
+                <div class="form-group">
+                  <label for="email">Correo electrónico</label>
+                  <input type="email" id="email" class="form-control" placeholder="Ingresa tu email" required>
+                </div>
+                <div class="form-group">
+                  <label for="telefono">Teléfono</label>
+                  <input type="tel" id="telefono" class="form-control" placeholder="Ingresa tu teléfono">
+                </div>
+                <div class="form-group">
+                  <label for="servicio">Servicio de interés</label>
+                  <select id="servicio" class="form-control">
+                    <option value="">Selecciona un servicio</option>
+                    <option value="fotografia">Fotografía Profesional</option>
+                    <option value="video">Producción de Video</option>
+                    <option value="baby-shower">Baby Shower</option>
+                    <option value="bautizo">Bautizo</option>
+                    <option value="bodas">Bodas</option>
+                    <option value="cumpleaños-adultos">Cumpleaños Adultos</option>
+                    <option value="infantil">Infantil</option>
+                    <option value="promocion">Promoción</option>
+                    <option value="quinceañera">Quinceañera</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="mensaje">Tu mensaje</label>
+                  <textarea id="mensaje" class="form-control" rows="4"
+                    placeholder="Cuéntanos sobre tu proyecto"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">Enviar mensaje</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECCIÓN CONTACTO (solo información) -->
+  <section class="contact-section">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-10">
+          <div class="contact-card">
+            <div class="row g-0">
+              <div class="col-lg-12">
+                <div class="contact-info">
+                  <h3>Información de contacto</h3>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <p>Av. Luis Massaro 805, Chincha Alta</p>
+                      </div>
+                      <div class="contact-item">
+                        <i class="fas fa-phone-alt"></i>
+                        <p><a href="tel:+51991157028">+51 991 157 028</a></p>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <p><a href="mailto:contacto@ishume.com">contacto@ishume.com</a></p>
+                      </div>
+                      <div class="contact-item">
+                        <i class="fas fa-clock"></i>
+                        <p>Lunes a Viernes: 9:00 AM - 6:00 PM</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="contact-social">
+                    <h4>Síguenos en redes</h4>
+                    <div class="social-icons">
+                      <a href="https://www.facebook.com/share/1RpNuWeJy7/" target="_blank" class="social-icon"><i
+                          class="fab fa-facebook-f"></i></a>
+                      <a href="https://www.instagram.com/ishume_productora_audiovisual?igsh=aGlzeWxvbG1tczc4"
+                        target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
+                      <a href="https://web.whatsapp.com/send/?phone=51991157028&" class="social-icon"><i
+                          class="fab fa-whatsapp"></i></a>
+                      <a href="https://www.tiktok.com/@ishume_productora?_t=ZS-8uDHet2DVHW&_r=1" target="_blank"
+                        class="social-icon"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                  </div>
+                  <div class="map-container mt-4">
+                    <iframe
+                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3880.8336825503447!2d-76.1293817!3d-13.422619800000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91101705c0be457d%3A0xeffddb37c13386d3!2sIshume%20-%20Productora%20Audiovisual!5e0!3m2!1ses!2spe!4v1743992663452!5m2!1ses!2spe"
+                      allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4">
+          <div class="footer-brand">
+            <h4 class="logo-brand">ISHUME</h4>
+            <p>Capturando momentos, creando recuerdos eternos con pasión y profesionalismo.</p>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="footer-links">
+            <h4>Enlaces rápidos</h4>
+            <ul>
+              <li><a href="/views/servicios.html">Servicios</a></li>
+              <li><a href="/views/contacto.html">Contacto</a></li>
+              <li><a href="/views/portafolio.html">Portafolio</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="footer-newsletter">
+            <h4>Suscríbete</h4>
+            <p>Recibe tips y promociones exclusivas</p>
+            <form class="newsletter-form">
+              <input type="email" placeholder="Tu correo electrónico">
+              <button type="submit"><i class="fas fa-paper-plane"></i></button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 ISHUME Productora Audiovisual. Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Botón flotante WhatsApp -->
+  <a href="https://web.whatsapp.com/send/?phone=51991157028&" class="whatsapp-float">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="/public/js/contactos.js"></script>
+</body>
+
+</html>

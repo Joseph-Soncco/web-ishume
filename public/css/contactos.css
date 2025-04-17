@@ -1,0 +1,597 @@
+/* PALETA DE COLORES PREMIUM */
+:root {
+  --color-primary: #f7931e; /* Naranja vibrante */
+  --color-primary-dark: #E04E0A;
+  --color-primary-light: #FF8C4D;
+  
+  --color-secondary: #1A1A1A; /* Negro profundo */
+  --color-secondary-light: #2D2D2D;
+    
+  --color-text: #000000;
+  --color-text-light: #F0F0F0;
+  --color-text-muted: #CCCCCC;
+  
+  --color-bg-dark: #121212;
+  --color-bg-light: #1E1E1E;
+  
+  --color-border: #333333;
+}
+
+/* ESTILOS GENERALES */
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: var(--color-text-light);
+  color: var(--color-text);
+  line-height: 1.7;
+  overflow-x: hidden;
+  padding-top: 80px;
+}
+
+.hero-title{
+  color: #000000;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 800;
+  font-size: 50px;
+  position: relative;
+}
+.hero-title span{
+  color: #f7931e;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 800;
+  font-size: 50px;
+  position: relative;
+}
+
+.hero-subtitle{
+  color: #000;
+  font-weight: 600;
+  padding-top: 20px;
+}
+
+/* NAVBAR */
+.navbar {
+  background-color: rgba(26, 26, 26, 0.95) !important;
+  backdrop-filter: blur(10px);
+  padding: 15px 0;
+  transition: all 0.4s ease;
+}
+
+.navbar.scrolled {
+  padding: 10px 0;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Logo y enlaces del Navbar */
+/* Aquí se modifica la clase .logo-brand para que use Montserrat y color blanco */
+.logo-brand {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 28px;
+  font-weight: 800;
+  color: white;
+  position: relative;
+}
+
+.logo-brand::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+}
+
+.nav-link {
+  font-weight: 600;
+  font-size: 15px;
+  letter-spacing: 1px;
+  padding: 8px 20px !important;
+  color: var(--color-primary);
+  position: relative;
+}
+
+.nav-link::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 20px;
+  width: 0;
+  height: 2px;
+  background-color: white;
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::before {
+  width: calc(100% - 40px);
+}
+
+.nav-link:hover {
+  color: white;
+}
+
+.nav-link.active {
+  color: white;
+}
+
+.nav-link.active::before {
+  width: calc(100% - 40px);
+}
+
+.social-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-text);
+  margin: 0 8px;
+  transition: all 0.3s ease;
+  border: 1px solid var(--color-border);
+  text-decoration: none !important;
+}
+
+.social-icon:hover {
+  background-color: var(--color-primary);
+  color: white;
+  border-color: var(--color-primary);
+  transform: translateY(-3px);
+}
+
+/* HERO CON FORMULARIO */
+.contact-hero-with-form {
+  height: auto;
+  min-height: 600px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  padding: 100px 0;
+}
+
+.hero-form-container {
+  background-color: rgba(26, 26, 26, 0.85);
+  backdrop-filter: blur(10px);
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.hero-form-container .contact-form h3 {
+  color: white;
+}
+
+.hero-form-container .form-control {
+  background-color: rgba(30, 30, 30, 0.8);
+}
+
+/* Ajustes responsivos */
+@media (max-width: 991px) {
+  .contact-hero-with-form {
+    padding: 80px 0;
+  }
+  
+  .hero-form-container {
+    margin-top: 40px;
+  }
+}
+
+@media (max-width: 767px) {
+  .contact-hero-with-form {
+    padding: 60px 0;
+    min-height: auto;
+  }
+  
+  .hero-title {
+    font-size: 36px;
+  }
+}
+
+@media (max-width: 575px) {
+  .hero-title {
+    font-size: 32px;
+  }
+  
+  .hero-form-container {
+    padding: 20px;
+  }
+}
+
+/* SECCIÓN CONTACTO */
+.contact-section {
+  padding: 80px 0;
+  background-color: var(--color-secondary);
+  position: relative;
+}
+
+.contact-card {
+  background-color: var(--color-secondary-light);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  border: 1px solid var(--color-border);
+}
+
+.contact-form {
+  padding: 50px;
+  height: 100%;
+}
+
+.contact-form h3 {
+  font-size: 28px;
+  margin-bottom: 30px;
+  color: var(--color-text);
+  font-family: 'Playfair Display', serif;
+}
+
+.form-group {
+  margin-bottom: 25px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--color-text-light);
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.form-control {
+  background-color: var(--color-bg-dark);
+  border: 1px solid var(--color-border);
+  color: var(--color-text);
+  padding: 12px 20px;
+  border-radius: 5px;
+  width: 100%;
+  transition: all 0.3s ease;
+}
+
+.form-control:focus {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 0.25rem rgba(255, 94, 20, 0.25);
+}
+
+textarea.form-control {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.btn-primary {
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+  color: white;
+  font-weight: 600;
+  padding: 12px 24px;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 14px;
+}
+
+.btn-primary:hover {
+  background-color: var(--color-primary-dark);
+  border-color: var(--color-primary-dark);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(255, 94, 20, 0.3);
+}
+
+.btn-block {
+  display: block;
+  width: 100%;
+}
+
+.contact-info {
+  padding: 50px;
+  height: 100%;
+  color: white;
+  position: relative;
+}
+
+.contact-info h3 {
+  font-size: 28px;
+  margin-bottom: 30px;
+  font-family: 'Playfair Display', serif;
+}
+
+.contact-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.contact-item i {
+  font-size: 20px;
+  margin-right: 15px;
+  color: var(--color-accent);
+  margin-top: 3px;
+}
+
+.contact-item p, 
+.contact-item a {
+  color: white;
+  margin: 0;
+  flex: 1;
+}
+
+.contact-item a:hover {
+  color: var(--color-accent);
+  text-decoration: underline;
+}
+
+.contact-social {
+  margin-top: 40px;
+}
+
+.contact-social h4 {
+  font-size: 18px;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.social-icons {
+  display: flex;
+  gap: 15px;
+}
+
+.social-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+  background-color: var(--color-secondary);
+  color: var(--color-primary);
+  transform: translateY(-3px);
+}
+
+.map-container {
+  height: 250px;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-top: 30px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.map-container iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* FOOTER */
+.footer {
+  background-color: var(--color-secondary);
+  padding: 80px 0 30px;
+  position: relative;
+}
+
+.footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(to right, transparent, var(--color-primary), transparent);
+}
+
+.footer-brand .logo-brand {
+  font-size: 24px;
+}
+
+.footer-brand p {
+  color: var(--color-text-muted);
+  margin-top: 20px;
+  font-size: 14px;
+  padding-top: 9.7px;
+}
+
+.footer-links h4 {
+  font-size: 18px;
+  margin-bottom: 25px;
+  color: white;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.footer-links h4::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 40px;
+  height: 2px;
+  background-color: #f7931e;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li {
+  margin-bottom: 12px;
+}
+
+.footer-links a {
+  color: var(--color-text-muted);
+  font-size: 14px;
+  transition: all 0.3s ease;
+  text-decoration: none !important;
+}
+
+.footer-links a:hover {
+  color: #f7931e;
+  padding-left: 5px;
+}
+
+.footer-newsletter h4 {
+  font-size: 18px;
+  margin-bottom: 20px;
+  color: white;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.footer-newsletter h4::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 40px;
+  height: 2px;
+  background-color: #f7931e;
+}
+
+.footer-newsletter p {
+  color: var(--color-text-muted);
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.newsletter-form {
+  display: flex;
+  position: relative;
+}
+
+.newsletter-form input {
+  width: 100%;
+  padding: 12px 20px;
+  border-radius: 50px;
+  border: 1px solid var(--color-border);
+  background-color: var(--color-bg-dark);
+  color: var(--color-text);
+}
+
+.newsletter-form button {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #f7931e;
+  color: white;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.newsletter-form button:hover {
+  background-color: var(--color-primary-dark);
+}
+
+.footer-bottom {
+  margin-top: 60px;
+  padding-top: 30px;
+  border-top: 1px solid var(--color-border);
+  text-align: center;
+}
+
+.footer-bottom p {
+  color: var(--color-text-muted);
+  font-size: 12px;
+  margin: 0;
+}
+
+/* WHATSAPP FLOTANTE */
+.whatsapp-float {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 30px;
+  right: 30px;
+  background-color: #25D366;
+  color: white;
+  border-radius: 50px;
+  text-align: center;
+  font-size: 30px;
+  box-shadow: 0 5px 15px rgba(37, 211, 102, 0.3);
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  border: none;
+}
+
+.whatsapp-float:hover {
+  background-color: #128C7E;
+  transform: scale(1.1);
+  outline: none;
+}
+
+/* SCROLLBAR PERSONALIZADA */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #f7931e;
+  border-radius: 10px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 991px) {
+  .contact-card {
+    flex-direction: column;
+  }
+  
+  .contact-form, 
+  .contact-info {
+    padding: 30px;
+  }
+  
+  .hero-title {
+    font-size: 48px;
+  }
+}
+
+@media (max-width: 767px) {
+  .contact-hero {
+    height: 50vh;
+    min-height: 400px;
+  }
+  
+  .hero-title {
+    font-size: 36px;
+  }
+  
+  .hero-subtitle {
+    font-size: 16px;
+  }
+  
+  .contact-form, 
+  .contact-info {
+    padding: 25px;
+  }
+}
+
+@media (max-width: 575px) {
+  .hero-title {
+    font-size: 32px;
+  }
+  
+  .whatsapp-float {
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    bottom: 20px;
+    right: 20px;
+  }
+}
