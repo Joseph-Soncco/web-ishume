@@ -146,19 +146,22 @@ h1, h2, h3, h4, h5, h6 {
 
 /* FILTROS PORTAFOLIO */
 .filter-nav {
-  display: flex;                       /* fila */
-  flex-wrap: nowrap;                   /* sin salto de línea */
-  overflow-x: auto;                    /* scroll horizontal */
-  -webkit-overflow-scrolling: touch;   /* suaviza en iOS */
-  justify-content: flex-start;         /* alineado a la izquierda */
-  gap: 15px;                           /* separación entre botones */
+  display: flex;                       
+  flex-wrap: nowrap;                   
+  overflow-x: auto;                    
+  -webkit-overflow-scrolling: touch;   
+  justify-content: flex-start;         /* vuelves al inicio */
+  gap: 15px;                           
   list-style: none;
   margin: 0;
-  padding: 0 0 0.5rem 0;               /* espacio abajo opcional */
+  padding: 0 0.5rem 0.5rem 1rem;       /* padding-left para dejar espacio */
   background-color: white;
+  cursor: grab;
+}
+.filter-nav.dragging {
+  cursor: grabbing;
 }
 
-/* Cada botón fijo de ancho y sin quiebres */
 .filter-nav .filter-item {
   flex: 0 0 auto;
   white-space: nowrap;
@@ -173,6 +176,7 @@ h1, h2, h3, h4, h5, h6 {
   text-transform: uppercase;
   letter-spacing: 1px;
 }
+
 .filter-nav .filter-item:hover,
 .filter-nav .filter-item.active {
   background-color: #f7931e;
@@ -186,6 +190,13 @@ h1, h2, h3, h4, h5, h6 {
 .filter-item:hover, .filter-item.active {
   background-color: #f7931e;
   color: white;
+}
+
+.filter-nav {
+  cursor: grab;
+}
+.filter-nav.dragging {
+  cursor: grabbing;
 }
 
 /* GALERÍA PORTAFOLIO */

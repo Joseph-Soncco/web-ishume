@@ -21,5 +21,40 @@ document.addEventListener('DOMContentLoaded', () => {
         });
       });
     });
-  });
-  
+});
+
+const slider = document.querySelector('.filter-nav');
+
+// — Drag to scroll (ya lo tienes) —
+let isDown = false;
+let startX;
+let scrollLeft;
+
+slider.addEventListener('mousedown', e => {
+  isDown = true;
+  slider.classList.add('dragging');
+  startX = e.pageX - slider.offsetLeft;
+  scrollLeft = slider.scrollLeft;
+});
+slider.addEventListener('mouseleave', () => {
+  isDown = false;
+  slider.classList.remove('dragging');
+});
+slider.addEventListener('mouseup', () => {
+  isDown = false;
+  slider.classList.remove('dragging');
+});
+slider.addEventListener('mousemove', e => {
+  if (!isDown) return;
+  e.preventDefault();
+  const x = e.pageX - slider.offsetLeft;
+  const walk = (x - startX) * 2; // ajusta la velocidad si quieres
+  slider.scrollLeft = scrollLeft - walk;
+});
+
+// — Scroll wheel convierte desplazamiento vertical en horizontal —
+slider.addEventListener('wheel', e => {
+  // solo cuando el ratón esté sobre .filter-nav
+  e.preventDefault();                 
+  slider.scrollLeft += e.deltaY;      // mueve horizontal según la rueda
+}, { passive: false });
