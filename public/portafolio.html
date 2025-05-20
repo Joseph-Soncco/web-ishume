@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Portafolio - ISHUME Productora Audiovisual</title>
+  <meta name="description"
+    content="Explora nuestro portafolio de trabajos en fotografía y producción audiovisual profesional"/>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"/>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"/>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Playfair+Display:wght@700;800&display=swap"
+    rel="stylesheet"/>
+
+  <!-- Estilos personalizados -->
+  <link rel="stylesheet" href="./css/portafolio.css"/>
+
+  <!-- Favicon -->
+  <link rel="icon" href="./images/SVG/icon-is.png"/>
+</head>
+<body>
+  <!-- NAVBAR -->
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="./index.html"><span class="logo-brand">ISHUME</span></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item"><a class="nav-link" href="./servicios.html">Servicios</a></li>
+            <li class="nav-item"><a class="nav-link active" href="./portafolio.html">Portafolio</a></li>
+            <li class="nav-item"><a class="nav-link" href="./contacto.html">Contacto</a></li>
+          </ul>
+          <div class="social-icons d-none d-lg-flex">
+            <a href="https://www.facebook.com/share/1RpNuWeJy7/" target="_blank" class="social-icon">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://www.instagram.com/ishume_productora_audiovisual" target="_blank" class="social-icon">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://web.whatsapp.com/send/?phone=51991157028&" class="social-icon">
+              <i class="fab fa-whatsapp"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- FILTROS PORTAFOLIO -->
+  <section class="portfolio-filters py-5">
+    <div class="container">
+      <ul class="filter-nav d-flex flex-wrap justify-content-center gap-3">
+        <li class="filter-item active" data-filter="all">Todos</li>
+        <li class="filter-item" data-filter="fotografia">Fotografía Profesional</li>
+        <li class="filter-item" data-filter="video">Producción de Video</li>
+        <li class="filter-item" data-filter="xv-anos">Baby Shower</li>
+        <li class="filter-item" data-filter="bautizo">Bautizo</li>
+        <li class="filter-item" data-filter="bodas">Bodas</li>
+        <li class="filter-item" data-filter="cumpleaños-adultos">Cumpleaños Adultos</li>
+        <li class="filter-item" data-filter="infantil">Infantil</li>
+        <li class="filter-item" data-filter="promocion">Promoción</li>
+        <li class="filter-item" data-filter="quinceañera">Quinceañera</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- GALERÍA PORTAFOLIO -->
+  <section class="portfolio-gallery py-5 bg-white">
+    <div class="container">
+      <div class="row g-4">
+
+        <!-- Fotografía Profesional -->
+        <div class="col-lg-4 col-md-6 portfolio-item" data-category="fotografia">
+          <div class="portfolio-card">
+            <div class="portfolio-img">
+              <img
+                src="/images/fotografia/fotografia-720.jpg"
+                srcset="
+                  /images/fotografia/fotografia-720.jpg   720w,
+                  /images/fotografia/fotografia-1536.jpg 1536w,
+                  /images/fotografia/fotografia-1920.jpg 1920w
+                "
+                sizes="(max-width:767px)100vw,(max-width:1199px)50vw,33vw"
+                loading="lazy"
+                alt="Fotografía Profesional"
+                class="object-cover w-full"
+              />
+              <div class="portfolio-overlay">
+                <a href="/images/fotografia/fotografia-1920.jpg" data-fancybox="gallery" class="portfolio-zoom">
+                  <i class="fas fa-expand"></i>
+                </a>
+                <div class="portfolio-info"><h4>Fotografía Profesional</h4></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Producción de Video -->
+        <div class="col-lg-4 col-md-6 portfolio-item" data-category="video">
+          <div class="portfolio-card">
+            <div class="portfolio-img">
+              <img
+                src="/images/SVG/icon-is.png"
+                alt="Producción de Video"
+                loading="lazy"
+                class="object-cover w-full"
+              />
+              <div class="portfolio-overlay">
+                <a href="/views/servicios.html" class="portfolio-zoom">
+                  <i class="fas fa-play"></i>
+                </a>
+                <div class="portfolio-info"><h4>Producción de Video</h4></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Baby Shower -->
+        <div class="col-lg-4 col-md-6 portfolio-item" data-category="xv-anos">
+          <div class="portfolio-card">
+            <div class="portfolio-img">
+              <img
+                src="/images/baby-shower/01-8-720.jpg"
+                srcset="
+                  /images/baby-shower/01-8-720.jpg   720w,
+                  /images/baby-shower/01-8-1536.jpg 1536w,
+                  /images/baby-shower/01-8-1920.jpg 1920w
+                "
+                sizes="(max-width:767px)100vw,(max-width:1199px)50vw,33vw"
+                loading="lazy"
+                alt="Baby Shower"
+                class="object-cover w-full"
+              />
+              <div class="portfolio-overlay">
+                <a href="/images/baby-shower/01-8-1920.jpg" data-fancybox="gallery" class="portfolio-zoom">
+                  <i class="fas fa-expand"></i>
+                </a>
+                <div class="portfolio-info"><h4>Baby Shower</h4></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bautizo -->
+        <div class="col-lg-4 col-md-6 portfolio-item" data-category="bautizo">
+          <div class="portfolio-card">
+            <div class="portfolio-img">
+              <img
+                src="/images/bautizo/bautizo-720.jpg"
+                srcset="
+                  /images/bautizo/bautizo-720.jpg   720w,
+                  /images/bautizo/bautizo-1536.jpg 1536w,
+                  /images/bautizo/bautizo-1920.jpg 1920w
+                "
+                sizes="(max-width:767px)100vw,(max-width:1199px)50vw,33vw"
+                loading="lazy"
+                alt="Bautizo"
+                class="object-cover w-full"
+              />
+              <div class="portfolio-overlay">
+                <a href="/images/bautizo/bautizo-1920.jpg" data-fancybox="gallery" class="portfolio-zoom">
+                  <i class="fas fa-expand"></i>
+                </a>
+                <div class="portfolio-info"><h4>Bautizo</h4></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bodas -->
+        <div class="col-lg-4 col-md-6 portfolio-item" data-category="bodas">
+          <div class="portfolio-card">
+            <div class="portfolio-img">
+              <img
+                src="/images/bodas/bodas-720.jpg"
+                srcset="
+                  /images/bodas/bodas-720.jpg   720w,
+                  /images/bodas/bodas-1536.jpg 1536w,
+                  /images/bodas/bodas-1920.jpg 1920w
+                "
+                sizes="(max-width:767px)100vw,(max-width:1199px)50vw,33vw"
+                loading="lazy"
+                alt="Bodas"
+                class="object-cover w-full"
+              />
+              <div class="portfolio-overlay">
+                <a href="/images/bodas/bodas-1920.jpg" data-fancybox="gallery" class="portfolio-zoom">
+                  <i class="fas fa-expand"></i>
+                </a>
+                <div class="portfolio-info"><h4>Bodas</h4></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Cumpleaños Adultos -->
+        <div class="col-lg-4 col-md-6 portfolio-item" data-category="cumpleaños-adultos">
+          <div class="portfolio-card">
+            <div class="portfolio-img">
+              <img
+                src="/images/cumpleanos-adulto/cumpleanos-adulto-720.jpg"
+                srcset="
+                  /images/cumpleanos-adulto/cumpleanos-adulto-720.jpg   720w,
+                  /images/cumpleanos-adulto/cumpleanos-adulto-1536.jpg 1536w,
+                  /images/cumpleanos-adulto/cumpleanos-adulto-1920.jpg 1920w
+                "
+                sizes="(max-width:767px)100vw,(max-width:1199px)50vw,33vw"
+                loading="lazy"
+                alt="Cumpleaños Adultos"
+                class="object-cover w-full"
+              />
+              <div class="portfolio-overlay">
+                <a href="/images/cumpleanos-adulto/cumpleanos-adulto-1920.jpg" data-fancybox="gallery" class="portfolio-zoom">
+                  <i class="fas fa-expand"></i>
+                </a>
+                <div class="portfolio-info"><h4>Cumpleaños Adultos</h4></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Infantil -->
+        <div class="col-lg-4 col-md-6 portfolio-item" data-category="infantil">
+          <div class="portfolio-card">
+            <div class="portfolio-img">
+              <img
+                src="/images/infantil/infantil-720.jpg"
+                srcset="
+                  /images/infantil/infantil-720.jpg   720w,
+                  /images/infantil/infantil-1536.jpg 1536w,
+                  /images/infantil/infantil-1920.jpg 1920w
+                "
+                sizes="(max-width:767px)100vw,(max-width:1199px)50vw,33vw"
+                loading="lazy"
+                alt="Infantil"
+                class="object-cover w-full"
+              />
+              <div class="portfolio-overlay">
+                <a href="/images/infantil/infantil-1920.jpg" data-fancybox="gallery" class="portfolio-zoom">
+                  <i class="fas fa-expand"></i>
+                </a>
+                <div class="portfolio-info"><h4>Infantil</h4></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Promoción -->
+        <div class="col-lg-4 col-md-6 portfolio-item" data-category="promocion">
+          <div class="portfolio-card">
+            <div class="portfolio-img">
+              <img
+                src="/images/promocion/promocion-720.jpg"
+                srcset="
+                  /images/promocion/promocion-720.jpg   720w,
+                  /images/promocion/promocion-1536.jpg 1536w,
+                  /images/promocion/promocion-1920.jpg 1920w
+                "
+                sizes="(max-width:767px)100vw,(max-width:1199px)50vw,33vw"
+                loading="lazy"
+                alt="Promoción"
+                class="object-cover w-full"
+              />
+              <div class="portfolio-overlay">
+                <a href="/images/promocion/promocion-1920.jpg" data-fancybox="gallery" class="portfolio-zoom">
+                  <i class="fas fa-expand"></i>
+                </a>
+                <div class="portfolio-info"><h4>Promoción</h4></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Quinceañera -->
+        <div class="col-lg-4 col-md-6 portfolio-item" data-category="quinceañera">
+          <div class="portfolio-card">
+            <div class="portfolio-img">
+              <img
+                src="/images/quinceañera/quinceañera-720.jpg"
+                srcset="
+                  /images/quinceañera/quinceañera-720.jpg   720w,
+                  /images/quinceañera/quinceañera-1536.jpg 1536w,
+                  /images/quinceañera/quinceañera-1920.jpg 1920w
+                "
+                sizes="(max-width:767px)100vw,(max-width:1199px)50vw,33vw"
+                loading="lazy"
+                alt="Quinceañera"
+                class="object-cover w-full"
+              />
+              <div class="portfolio-overlay">
+                <a href="/images/quinceañera/quinceañera-1920.jpg" data-fancybox="gallery" class="portfolio-zoom">
+                  <i class="fas fa-expand"></i>
+                </a>
+                <div class="portfolio-info"><h4>Quinceañera</h4></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER PREMIUM -->
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4">
+          <div class="footer-brand">
+            <h4 class="logo-brand-1">ISHUME</h4>
+            <p>Capturando momentos, creando recuerdos eternos con pasión y profesionalismo.</p>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="footer-links">
+            <h4>Enlaces rápidos</h4>
+            <ul>
+              <li><a href="/views/servicios.html">Servicios</a></li>
+              <li><a href="/views/portafolio.html">Portafolio</a></li>
+              <li><a href="/views/contacto.html">Contacto</a></li>
+            </ul>
+          </div>
+        </div>
+        
+      </div>
+      <div class="footer-bottom">
+        <p>Ishume<sup>&trade;</sup> Productora Audiovisual. Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </footer>
+  <a href="https://web.whatsapp.com/send/?phone=51991157028&" class="whatsapp-float">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="/js/portafolio.js"></script>
+</body>
+</html>
