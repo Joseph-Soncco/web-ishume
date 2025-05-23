@@ -4,40 +4,37 @@
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Portafolio - ISHUME Productora Audiovisual</title>
-  <meta name="description"
-    content="Explora nuestro portafolio de trabajos en fotografía y producción audiovisual profesional"/>
+  <meta name="description" content="Explora nuestro portafolio de trabajos en fotografía y producción audiovisual profesional"/>
 
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"/>
 
   <!-- Font Awesome -->
-  <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"/>
 
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Playfair+Display:wght@700;800&display=swap"
-    rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet"/>
 
-  <!-- Estilos personalizados -->
-  <link rel="stylesheet" href="./css/portafolio.css"/>
+  <!-- Animate CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 
-  <!-- Favicon -->
-  <link rel="icon" href="./images/SVG/icon-is.png"/>
+  <link rel="stylesheet" href="css/portafolio.css">
 </head>
 <body>
   <!-- NAVBAR -->
   <header>
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
       <div class="container">
-        <a class="navbar-brand" href="./index.html"><span class="logo-brand">ISHUME</span></a>
+        <a class="navbar-brand" href="/index.html"><span class="logo-brand">ISHUME</span></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav mx-auto">
-            <li class="nav-item"><a class="nav-link" href="./servicios.html">Servicios</a></li>
-            <li class="nav-item"><a class="nav-link active" href="./portafolio.html">Portafolio</a></li>
-            <li class="nav-item"><a class="nav-link" href="./contacto.html">Contacto</a></li>
+            <li class="nav-item"><a class="nav-link" href="/nosotros.html">Nosotros</a></li>
+            <li class="nav-item"><a class="nav-link" href="/servicios.html">Servicios</a></li>
+            <li class="nav-item"><a class="nav-link active" href="/portafolio.html">Portafolio</a></li>
+            <li class="nav-item"><a class="nav-link" href="/contacto.html">Contacto</a></li>
           </ul>
           <div class="social-icons d-none d-lg-flex">
             <a href="https://www.facebook.com/share/1RpNuWeJy7/" target="_blank" class="social-icon">
@@ -55,9 +52,88 @@
     </nav>
   </header>
 
-  <!-- FILTROS PORTAFOLIO -->
-  <section class="portfolio-filters py-5">
+  <!-- SECCIÓN DE PROCESO DE TRABAJO -->
+  <section class="work-process py-5">
     <div class="container">
+      <div class="row align-items-center mb-5">
+        <div class="col-lg-6">
+          <h2 class="section-title">Nuestro Proceso Creativo</h2>
+          <p class="lead">Cada proyecto es una historia única que merece ser contada con pasión y profesionalismo.</p>
+        </div>
+      </div>
+
+      <!-- Paso 1: Conceptualización -->
+      <div class="row align-items-center process-step mb-5">
+        <div class="col-lg-6 pe-lg-5">
+          <div class="step-content">
+            <span class="step-number">01</span>
+            <h3>Conceptualización</h3>
+            <p>Trabajamos contigo para entender tu visión, objetivos y estilo preferido. Creamos un moodboard y plan de rodaje/fotografía.</p>
+            <ul class="process-features">
+              <li><i class="fas fa-check-circle me-2"></i>Reunión inicial</li>
+              <li><i class="fas fa-check-circle me-2"></i>Moodboard visual</li>
+              <li><i class="fas fa-check-circle me-2"></i>Plan de trabajo</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="portfolio-img">
+            <img src="/images/fotografia/fotografia-720.jpg" alt="Proceso de conceptualización" class="img-fluid rounded">
+          </div>
+        </div>
+      </div>
+
+      <!-- Paso 2: Producción -->
+      <div class="row align-items-center process-step mb-5 flex-lg-row-reverse">
+        <div class="col-lg-6 ps-lg-5">
+          <div class="step-content">
+            <span class="step-number">02</span>
+            <h3>Producción</h3>
+            <p>Nuestro equipo profesional captura cada momento con equipos de última generación y atención al detalle.</p>
+            <ul class="process-features">
+              <li><i class="fas fa-check-circle me-2"></i>Equipo profesional</li>
+              <li><i class="fas fa-check-circle me-2"></i>Dirección creativa</li>
+              <li><i class="fas fa-check-circle me-2"></i>Captura de momentos</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="portfolio-img">
+            <img src="/images/bodas/bodas-720.jpg" alt="Proceso de producción" class="img-fluid rounded">
+          </div>
+        </div>
+      </div>
+
+      <!-- Paso 3: Postproducción -->
+      <div class="row align-items-center process-step mb-5">
+        <div class="col-lg-6 pe-lg-5">
+          <div class="step-content">
+            <span class="step-number">03</span>
+            <h3>Postproducción</h3>
+            <p>Editamos y perfeccionamos cada imagen y video para garantizar la máxima calidad y coherencia con tu visión.</p>
+            <ul class="process-features">
+              <li><i class="fas fa-check-circle me-2"></i>Edición profesional</li>
+              <li><i class="fas fa-check-circle me-2"></i>Corrección de color</li>
+              <li><i class="fas fa-check-circle me-2"></i>Entrega final</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="portfolio-img">
+            <img src="/images/quinceanera/quinceanera-720.jpg" alt="Proceso de postproducción" class="img-fluid rounded">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FILTROS PORTAFOLIO -->
+  <section class="portfolio-filters py-5 bg-light">
+    <div class="container">
+      <div class="section-header text-center mb-5">
+        <h2 class="section-title">Nuestros Trabajos</h2>
+        <p class="lead">Explora nuestros proyectos destacados en diferentes categorías</p>
+      </div>
       <ul class="filter-nav d-flex flex-wrap justify-content-center gap-3">
         <li class="filter-item active" data-filter="all">Todos</li>
         <li class="filter-item" data-filter="fotografia">Fotografía Profesional</li>
@@ -74,7 +150,7 @@
   </section>
 
   <!-- GALERÍA PORTAFOLIO -->
-  <section class="portfolio-gallery py-5 bg-white">
+  <section class="portfolio-gallery py-5 bg-light">
     <div class="container">
       <div class="row g-4">
 
@@ -84,21 +160,30 @@
             <div class="portfolio-img">
               <img
                 src="/images/fotografia/fotografia-720.jpg"
-                srcset="
-                  /images/fotografia/fotografia-720.jpg   720w,
-                  /images/fotografia/fotografia-1536.jpg 1536w,
-                  /images/fotografia/fotografia-1920.jpg 1920w
-                "
-                sizes="(max-width:767px)100vw,(max-width:1199px)50vw,33vw"
-                loading="lazy"
                 alt="Fotografía Profesional"
+                loading="lazy"
                 class="object-cover w-full"
               />
               <div class="portfolio-overlay">
-                <a href="/images/fotografia/fotografia-1920.jpg" data-fancybox="gallery" class="portfolio-zoom">
+                <a href="#" class="portfolio-zoom" data-bs-toggle="modal" data-bs-target="#portfolioModal1">
                   <i class="fas fa-expand"></i>
                 </a>
-                <div class="portfolio-info"><h4>Fotografía Profesional</h4></div>
+                <div class="portfolio-info">
+                  <h4>Fotografía Profesional</h4>
+                  <button class="btn btn-sm btn-primary mt-2" data-bs-toggle="collapse" data-bs-target="#descripcion1">
+                    Ver detalles
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="portfolio-description collapse" id="descripcion1">
+              <div class="p-3">
+                <p>Sesiones fotográficas profesionales con iluminación controlada y dirección creativa.</p>
+                <ul class="list-unstyled">
+                  <li><i class="fas fa-check text-primary me-2"></i>Retratos</li>
+                  <li><i class="fas fa-check text-primary me-2"></i>Productos</li>
+                  <li><i class="fas fa-check text-primary me-2"></i>Eventos</li>
+                </ul>
               </div>
             </div>
           </div>
@@ -109,16 +194,31 @@
           <div class="portfolio-card">
             <div class="portfolio-img">
               <img
-                src="./images/SVG/icon-is.png"
+                src="/images/SVG/icon-is.png"
                 alt="Producción de Video"
                 loading="lazy"
                 class="object-cover w-full"
               />
               <div class="portfolio-overlay">
-                <a href="./servicios.html" class="portfolio-zoom">
+                <a href="/servicios.html" class="portfolio-zoom">
                   <i class="fas fa-play"></i>
                 </a>
-                <div class="portfolio-info"><h4>Producción de Video</h4></div>
+                <div class="portfolio-info">
+                  <h4>Producción de Video</h4>
+                  <button class="btn btn-sm btn-primary mt-2" data-bs-toggle="collapse" data-bs-target="#descripcion2">
+                    Ver detalles
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="portfolio-description collapse" id="descripcion2">
+              <div class="p-3">
+                <p>Producción de videos profesionales para eventos, comerciales y contenido digital.</p>
+                <ul class="list-unstyled">
+                  <li><i class="fas fa-check text-primary me-2"></i>Videos de eventos</li>
+                  <li><i class="fas fa-check text-primary me-2"></i>Comerciales</li>
+                  <li><i class="fas fa-check text-primary me-2"></i>Contenido para redes</li>
+                </ul>
               </div>
             </div>
           </div>
@@ -130,21 +230,30 @@
             <div class="portfolio-img">
               <img
                 src="/images/baby-shower/baby-shower-720.jpg"
-                srcset="
-                  /images/baby-shower/baby-shower-720.jpg   720w,
-                  /images/baby-shower/baby-shower-1536.jpg 1536w,
-                  /images/baby-shower/baby-shower-1920.jpg 1920w
-                "
-                sizes="(max-width:767px)100vw,(max-width:1199px)50vw,33vw"
-                loading="lazy"
                 alt="Baby Shower"
+                loading="lazy"
                 class="object-cover w-full"
               />
               <div class="portfolio-overlay">
                 <a href="/images/baby-shower/baby-shower-1920.jpg" data-fancybox="gallery" class="portfolio-zoom">
                   <i class="fas fa-expand"></i>
                 </a>
-                <div class="portfolio-info"><h4>Baby Shower</h4></div>
+                <div class="portfolio-info">
+                  <h4>Baby Shower</h4>
+                  <button class="btn btn-sm btn-primary mt-2" data-bs-toggle="collapse" data-bs-target="#descripcion3">
+                    Ver detalles
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="portfolio-description collapse" id="descripcion3">
+              <div class="p-3">
+                <p>Cobertura fotográfica y de video para baby showers, capturando momentos especiales.</p>
+                <ul class="list-unstyled">
+                  <li><i class="fas fa-check text-primary me-2"></i>Sesión de fotos</li>
+                  <li><i class="fas fa-check text-primary me-2"></i>Video recuerdo</li>
+                  <li><i class="fas fa-check text-primary me-2"></i>Álbum digital</li>
+                </ul>
               </div>
             </div>
           </div>
@@ -156,21 +265,30 @@
             <div class="portfolio-img">
               <img
                 src="/images/bautizo/bautizo-720.jpg"
-                srcset="
-                  /images/bautizo/bautizo-720.jpg   720w,
-                  /images/bautizo/bautizo-1536.jpg 1536w,
-                  /images/bautizo/bautizo-1920.jpg 1920w
-                "
-                sizes="(max-width:767px)100vw,(max-width:1199px)50vw,33vw"
-                loading="lazy"
                 alt="Bautizo"
+                loading="lazy"
                 class="object-cover w-full"
               />
               <div class="portfolio-overlay">
                 <a href="/images/bautizo/bautizo-1920.jpg" data-fancybox="gallery" class="portfolio-zoom">
                   <i class="fas fa-expand"></i>
                 </a>
-                <div class="portfolio-info"><h4>Bautizo</h4></div>
+                <div class="portfolio-info">
+                  <h4>Bautizo</h4>
+                  <button class="btn btn-sm btn-primary mt-2" data-bs-toggle="collapse" data-bs-target="#descripcion4">
+                    Ver detalles
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="portfolio-description collapse" id="descripcion4">
+              <div class="p-3">
+                <p>Cobertura completa de ceremonias de bautizo con fotografía y video profesional.</p>
+                <ul class="list-unstyled">
+                  <li><i class="fas fa-check text-primary me-2"></i>Ceremonia</li>
+                  <li><i class="fas fa-check text-primary me-2"></i>Sesión familiar</li>
+                  <li><i class="fas fa-check text-primary me-2"></i>Video recuerdo</li>
+                </ul>
               </div>
             </div>
           </div>
@@ -182,21 +300,30 @@
             <div class="portfolio-img">
               <img
                 src="/images/bodas/bodas-720.jpg"
-                srcset="
-                  /images/bodas/bodas-720.jpg   720w,
-                  /images/bodas/bodas-1536.jpg 1536w,
-                  /images/bodas/bodas-1920.jpg 1920w
-                "
-                sizes="(max-width:767px)100vw,(max-width:1199px)50vw,33vw"
-                loading="lazy"
                 alt="Bodas"
+                loading="lazy"
                 class="object-cover w-full"
               />
               <div class="portfolio-overlay">
                 <a href="/images/bodas/bodas-1920.jpg" data-fancybox="gallery" class="portfolio-zoom">
                   <i class="fas fa-expand"></i>
                 </a>
-                <div class="portfolio-info"><h4>Bodas</h4></div>
+                <div class="portfolio-info">
+                  <h4>Bodas</h4>
+                  <button class="btn btn-sm btn-primary mt-2" data-bs-toggle="collapse" data-bs-target="#descripcion5">
+                    Ver detalles
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="portfolio-description collapse" id="descripcion5">
+              <div class="p-3">
+                <p>Cobertura completa de bodas con fotografía y video profesional para capturar cada momento especial.</p>
+                <ul class="list-unstyled">
+                  <li><i class="fas fa-check text-primary me-2"></i>Pre-boda</li>
+                  <li><i class="fas fa-check text-primary me-2"></i>Ceremonia</li>
+                  <li><i class="fas fa-check text-primary me-2"></i>Recepción</li>
+                </ul>
               </div>
             </div>
           </div>
@@ -208,21 +335,30 @@
             <div class="portfolio-img">
               <img
                 src="/images/cumpleanos-adulto/cumpleanos-adulto-720.jpg"
-                srcset="
-                  /images/cumpleanos-adulto/cumpleanos-adulto-720.jpg   720w,
-                  /images/cumpleanos-adulto/cumpleanos-adulto-1536.jpg 1536w,
-                  /images/cumpleanos-adulto/cumpleanos-adulto-1920.jpg 1920w
-                "
-                sizes="(max-width:767px)100vw,(max-width:1199px)50vw,33vw"
-                loading="lazy"
                 alt="Cumpleaños Adultos"
+                loading="lazy"
                 class="object-cover w-full"
               />
               <div class="portfolio-overlay">
                 <a href="/images/cumpleanos-adulto/cumpleanos-adulto-1920.jpg" data-fancybox="gallery" class="portfolio-zoom">
                   <i class="fas fa-expand"></i>
                 </a>
-                <div class="portfolio-info"><h4>Cumpleaños Adultos</h4></div>
+                <div class="portfolio-info">
+                  <h4>Cumpleaños Adultos</h4>
+                  <button class="btn btn-sm btn-primary mt-2" data-bs-toggle="collapse" data-bs-target="#descripcion6">
+                    Ver detalles
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="portfolio-description collapse" id="descripcion6">
+              <div class="p-3">
+                <p>Fotografía y video para celebraciones de cumpleaños adultos, capturando la esencia de la fiesta.</p>
+                <ul class="list-unstyled">
+                  <li><i class="fas fa-check text-primary me-2"></i>Sesión de fotos</li>
+                  <li><i class="fas fa-check text-primary me-2"></i>Video recuerdo</li>
+                  <li><i class="fas fa-check text-primary me-2"></i>Moments clave</li>
+                </ul>
               </div>
             </div>
           </div>
@@ -234,21 +370,30 @@
             <div class="portfolio-img">
               <img
                 src="/images/infantil/infantil-720.jpg"
-                srcset="
-                  /images/infantil/infantil-720.jpg   720w,
-                  /images/infantil/infantil-1536.jpg 1536w,
-                  /images/infantil/infantil-1920.jpg 1920w
-                "
-                sizes="(max-width:767px)100vw,(max-width:1199px)50vw,33vw"
-                loading="lazy"
                 alt="Infantil"
+                loading="lazy"
                 class="object-cover w-full"
               />
               <div class="portfolio-overlay">
                 <a href="/images/infantil/infantil-1920.jpg" data-fancybox="gallery" class="portfolio-zoom">
                   <i class="fas fa-expand"></i>
                 </a>
-                <div class="portfolio-info"><h4>Infantil</h4></div>
+                <div class="portfolio-info">
+                  <h4>Infantil</h4>
+                  <button class="btn btn-sm btn-primary mt-2" data-bs-toggle="collapse" data-bs-target="#descripcion7">
+                    Ver detalles
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="portfolio-description collapse" id="descripcion7">
+              <div class="p-3">
+                <p>Sesiones fotográficas para niños, capturando su espontaneidad y alegría.</p>
+                <ul class="list-unstyled">
+                  <li><i class="fas fa-check text-primary me-2"></i>Sesión en estudio</li>
+                  <li><i class="fas fa-check text-primary me-2"></i>Sesión al aire libre</li>
+                  <li><i class="fas fa-check text-primary me-2"></i>Fotos temáticas</li>
+                </ul>
               </div>
             </div>
           </div>
@@ -260,55 +405,92 @@
             <div class="portfolio-img">
               <img
                 src="/images/promocion/promocion-720.jpg"
-                srcset="
-                  /images/promocion/promocion-720.jpg   720w,
-                  /images/promocion/promocion-1536.jpg 1536w,
-                  /images/promocion/promocion-1920.jpg 1920w
-                "
-                sizes="(max-width:767px)100vw,(max-width:1199px)50vw,33vw"
-                loading="lazy"
                 alt="Promoción"
+                loading="lazy"
                 class="object-cover w-full"
               />
               <div class="portfolio-overlay">
                 <a href="/images/promocion/promocion-1920.jpg" data-fancybox="gallery" class="portfolio-zoom">
                   <i class="fas fa-expand"></i>
                 </a>
-                <div class="portfolio-info"><h4>Promoción</h4></div>
+                <div class="portfolio-info">
+                  <h4>Promoción</h4>
+                  <button class="btn btn-sm btn-primary mt-2" data-bs-toggle="collapse" data-bs-target="#descripcion8">
+                    Ver detalles
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="portfolio-description collapse" id="descripcion8">
+              <div class="p-3">
+                <p>Fotografía y video promocional para empresas, productos y servicios.</p>
+                <ul class="list-unstyled">
+                  <li><i class="fas fa-check text-primary me-2"></i>Fotografía de producto</li>
+                  <li><i class="fas fa-check text-primary me-2"></i>Videos promocionales</li>
+                  <li><i class="fas fa-check text-primary me-2"></i>Contenido para redes</li>
+                </ul>
               </div>
             </div>
           </div>
         </div>
 
         <!-- Quinceañera -->
-        <div class="col-lg-4 col-md-6 portfolio-item" data-category="quinceanera">
+        <div class="col-lg-4 col-md-6 portfolio-item" data-category="quinceañera">
           <div class="portfolio-card">
             <div class="portfolio-img">
               <img
                 src="/images/quinceanera/quinceanera-720.jpg"
-                srcset="
-                  /images/quinceanera/quinceanera-720.jpg   720w,
-                  /images/quinceanera/quinceanera-1536.jpg 1536w,
-                  /images/quinceanera/quinceanera-1920.jpg 1920w
-                "
-                sizes="(max-width:767px)100vw,(max-width:1199px)50vw,33vw"
+                alt="Quinceañera"
                 loading="lazy"
-                alt="Quinceanera"
                 class="object-cover w-full"
               />
               <div class="portfolio-overlay">
                 <a href="/images/quinceanera/quinceanera-1920.jpg" data-fancybox="gallery" class="portfolio-zoom">
                   <i class="fas fa-expand"></i>
                 </a>
-                <div class="portfolio-info"><h4>Quinceañera</h4></div>
+                <div class="portfolio-info">
+                  <h4>Quinceañera</h4>
+                  <button class="btn btn-sm btn-primary mt-2" data-bs-toggle="collapse" data-bs-target="#descripcion9">
+                    Ver detalles
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="portfolio-description collapse" id="descripcion9">
+              <div class="p-3">
+                <p>Cobertura completa de fiestas de quince años con fotografía y video profesional.</p>
+                <ul class="list-unstyled">
+                  <li><i class="fas fa-check text-primary me-2"></i>Sesión previa</li>
+                  <li><i class="fas fa-check text-primary me-2"></i>Ceremonia</li>
+                  <li><i class="fas fa-check text-primary me-2"></i>Fiesta</li>
+                </ul>
               </div>
             </div>
           </div>
         </div>
-
       </div>
     </div>
   </section>
+
+  <!-- Modales para galería -->
+  <!-- Modal 1 -->
+  <div class="modal fade" id="portfolioModal1" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Fotografía Profesional</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <img src="/images/fotografia/fotografia-1920.jpg" class="img-fluid" alt="Fotografía profesional">
+          <div class="mt-3">
+            <h6>Detalles del Proyecto</h6>
+            <p>Sesión fotográfica para catálogo de moda con iluminación natural y artificial.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!-- FOOTER PREMIUM -->
   <footer class="footer">
@@ -330,7 +512,26 @@
             </ul>
           </div>
         </div>
-        
+        <div class="col-lg-4">
+          <div class="footer-links">
+            <h4>Contacto</h4>
+            <ul>
+              <li><i class="fas fa-phone-alt me-2"></i> +51 991 157 028</li>
+              <li><i class="fas fa-envelope me-2"></i> contacto@ishume.com</li>
+            </ul>
+            <div class="social-icons mt-3">
+              <a href="https://www.facebook.com/share/1RpNuWeJy7/" target="_blank" class="social-icon">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a href="https://www.instagram.com/ishume_productora_audiovisual" target="_blank" class="social-icon">
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a href="https://web.whatsapp.com/send/?phone=51991157028&" class="social-icon">
+                <i class="fab fa-whatsapp"></i>
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
       <div class="footer-bottom">
         <p>Ishume<sup>&trade;</sup> Productora Audiovisual. Todos los derechos reservados.</p>
@@ -343,6 +544,6 @@
 
   <!-- Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="/js/portafolio.js"></script>
+  <script src="js/portafolio.js"></script>
 </body>
 </html>

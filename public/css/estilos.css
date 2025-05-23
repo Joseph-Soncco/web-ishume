@@ -818,6 +818,35 @@ a {
   font-size: 14px;
 }
 
+
+/* Estilos para el contenedor de Three.js */
+#threejs-container {
+  position: relative;
+  margin-top: 20px;
+  border-radius: 10px;
+  overflow: hidden;
+  background: transparent;
+}
+
+/* Ajustes responsivos para la sección hero */
+@media (max-width: 992px) {
+  .hero-section {
+    min-height: auto;
+    padding: 150px 0 100px;
+  }
+  
+  #threejs-container {
+    height: 300px !important;
+    margin-top: 50px;
+  }
+}
+
+@media (max-width: 768px) {
+  #threejs-container {
+    height: 250px !important;
+  }
+}
+
 /* Estilos responsivos */
 @media (max-width: 768px) {
   .hero-title {
@@ -835,3 +864,4 @@ a {
     margin-bottom: 30px;
   }
 }
+
