@@ -1,63 +1,58 @@
-<!-- views/index.html -->
 <!DOCTYPE html>
 <html lang="es">
 
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>ISHUME - Productora Audiovisual Profesional</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ISHUME - Productora Audiovisual Profesional en Chincha</title>
   <meta name="description"
-    content="Capturamos los momentos más especiales de tu vida con fotografía y producción audiovisual profesional en Chincha"/>
+    content="ISHUME Productora Audiovisual en Chincha. Transformamos tus ideas en fotografía y video impactantes para eventos, empresas y más. ¡Recuerdos eternos con calidad profesional!" />
+  <meta name="keywords"
+    content="productora audiovisual chincha, video chincha, fotografia chincha, eventos chincha, video corporativo chincha, ISHUME" />
 
-  <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
 
-  <!-- Font Awesome -->
-  <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Playfair+Display:wght@700;800&display=swap"
-    rel="stylesheet"/>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Playfair+Display:wght@700;800&display=swap"
+    rel="stylesheet" />
 
-  <!-- En el <head> o antes del cierre del <body> -->
   <script src="https://cdn.jsdelivr.net/npm/three@0.132.2/build/three.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/three@0.132.2/examples/js/loaders/FontLoader.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/three@0.132.2/examples/js/geometries/TextGeometry.js"></script>
 
-  <!-- Estilos personalizados -->
-  <link rel="stylesheet" href="/css/estilos.css"/>
-
-  <!-- Favicon -->
-  <link rel="icon" href="/images/SVG/icon-is.png"/>
+  <link rel="icon" href="/images/SVG/icon-is.png" />
+  <link rel="stylesheet" href="css/estilos.css">
 </head>
 
 <body>
-  <!-- NAVBAR PREMIUM -->
   <header>
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
       <div class="container">
-        <a class="navbar-brand" href="index.html">
-          <span class="logo-brand">ISHUME</span>
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <a class="navbar-brand logo-brand" href="index.html">ISHUME</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav mx-auto">
+            <li class="nav-item"><a class="nav-link active" href="index.html">Inicio</a></li>
             <li class="nav-item"><a class="nav-link" href="/nosotros.html">Nosotros</a></li>
             <li class="nav-item"><a class="nav-link" href="/servicios.html">Servicios</a></li>
             <li class="nav-item"><a class="nav-link" href="/portafolio.html">Portafolio</a></li>
             <li class="nav-item"><a class="nav-link" href="/contacto.html">Contacto</a></li>
           </ul>
-          <div class="social-icons d-none d-lg-flex">
-            <a href="https://www.facebook.com/share/1RpNuWeJy7/" target="_blank" class="social-icon">
+          <div class="social-icons d-none d-lg-flex align-items-center">
+            <a href="https://www.facebook.com/share/1RpNuWeJy7/" target="_blank" class="social-icon"
+              aria-label="Facebook">
               <i class="fab fa-facebook-f"></i>
             </a>
-            <a href="https://www.instagram.com/ishume_productora_audiovisual" target="_blank" class="social-icon">
+            <a href="https://www.instagram.com/ishume_productora_audiovisual" target="_blank" class="social-icon"
+              aria-label="Instagram">
               <i class="fab fa-instagram"></i>
             </a>
-            <a href="https://web.whatsapp.com/send/?phone=51991157028&" class="social-icon">
+            <a href="https://wa.me/51991157028" target="_blank" class="social-icon" aria-label="WhatsApp">
               <i class="fab fa-whatsapp"></i>
             </a>
           </div>
@@ -66,209 +61,365 @@
     </nav>
   </header>
 
-  <!-- HERO SECTION DE LUJO -->
-  <section class="hero-section">
-    <div class="container h-100">
-      <div class="row h-100 align-items-center">
-        <!-- IZQUIERDA: texto y botones -->
-        <div class="col-lg-6">
-          <h1 class="hero-title">Transformamos momentos <span>en recuerdos eternos</span></h1>
-          <p class="hero-subtitle">Fotografía y producción audiovisual de excelencia para tus eventos más especiales
-          </p>
-          <div class="hero-cta">
-            <a href="#servicios" class="btn btn-primary btn-lg me-3">Explorar Servicios</a>
-            <a href="/contacto.html" class="btn btn-outline-dark btn-lg">Contacto</a>
-          </div>
-        </div>
-        <!-- DERECHA: Three.js -->
-        <div class="col-lg-6 d-none d-lg-block">
-          <div id="threejs-container" style="width:100%; height:400px;"></div>
-        </div>
-      </div>
-    </div>
-    <div class="scroll-indicator"><i class="fas fa-chevron-down"></i></div>
-  </section>
-
-  <!-- SECCIÓN EQUIPO PREMIUM -->
-  <section class="experience-section">
-    <div class="container">
-      <div class="row align-items-center">
-        <div class="col-lg-6">
-          <div class="experience-content">
-            <h2 class="section-title">Conoce al equipo de<span> Ishume</span></h2>
-            <p class="text-p">
-              Somos un grupo de creativos y profesionales apasionados por la fotografía y la producción audiovisual.
-              Trabajamos en conjunto para transformar ideas en experiencias visuales inolvidables.
+  <main>
+    <section class="hero-section">
+      <div class="container h-100">
+        <div class="row h-100 align-items-center">
+          <div class="col-lg-6">
+            <h1 class="hero-title">Transformamos momentos <span>en recuerdos eternos</span></h1>
+            <p class="hero-subtitle">Fotografía y producción audiovisual de excelencia en Chincha para tus eventos más
+              especiales.
             </p>
-            <div class="experience-stats">
-              <div class="stat-item"><div class="stat-number" data-count="500"></div><div class="stat-label"></div></div>
-              <div class="stat-item"><div class="stat-number" data-count="8"></div><div class="stat-label"></div></div>
-              <div class="stat-item"><div class="stat-number" data-count="100"></div><div class="stat-label"></div></div>
+            <div class="hero-cta">
+              <a href="#servicios" class="btn btn-primary btn-lg me-lg-3 mb-3 mb-lg-0">Explorar Servicios</a>
+              <a href="/contacto.html" class="btn btn-outline-light btn-lg">Contáctanos</a>
             </div>
           </div>
-        </div>
-        <div class="col-lg-6">
-          <div class="video-container ratio ratio-16x9">
-            <iframe src="https://www.youtube.com/embed/IXUNVqCxEeA?si=OBliA3220_TSRllc" allowfullscreen></iframe>
+          <div class="col-lg-6 d-none d-lg-block">
+            <div id="threejs-container"></div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+      <div class="scroll-indicator"><i class="fas fa-chevron-down"></i></div>
+    </section>
 
-  <!-- SECCIÓN SERVICIOS PREMIUM -->
-  <section id="servicios" class="services-section">
-    <div class="container">
-      <div class="section-header text-center">
-        <h2 class="section-title-1">Nuestros <span>Servicios</span></h2>
-        <p class="section-subtitle-1">Soluciones creativas adaptadas a cada tipo de evento con la más alta calidad
-          profesional
+    <section id="servicios" class="services-section section-padding">
+      <div class="container">
+        <div class="section-header text-center">
+          <h2 class="section-title-1">Nuestros <span>Servicios</span></h2>
+          <p class="section-subtitle-1">Soluciones creativas adaptadas a cada tipo de evento con la más alta calidad
+            profesional.
+          </p>
+        </div>
+        <div class="row g-4 justify-content-center">
+          <div class="col-lg-4 col-md-6">
+            <div class="service-card">
+              <div class="service-img">
+                <img src="https://placehold.co/720x450/333/FF5E14?text=Fotografía" srcset="
+                    https://placehold.co/720x450/333/FF5E14?text=Fotografía+720w 720w,
+                    https://placehold.co/1536x960/333/FF5E14?text=Fotografía+1536w 1536w,
+                    https://placehold.co/1920x1200/333/FF5E14?text=Fotografía+1920w 1920w"
+                  sizes="(max-width:767px)100vw,(max-width:1199px)50vw,33vw" loading="lazy"
+                  alt="Servicio de Fotografía Profesional en Chincha" class="object-cover w-full" />
+                <div class="service-overlay">
+                  <a href="/servicios.html#fotografia" class="btn btn-circle"
+                    aria-label="Ver detalles de Fotografía Profesional"><i class="fas fa-arrow-right"></i></a>
+                </div>
+              </div>
+              <div class="service-content">
+                <h3>Fotografía Profesional</h3>
+                <p>Capturamos momentos únicos en estudio o locación con equipo profesional de última generación.</p>
+                <ul class="service-features">
+                  <li><i class="fas fa-check"></i> Sesiones personalizadas</li>
+                  <li><i class="fas fa-check"></i> Equipo de alta gama</li>
+                  <li><i class="fas fa-check"></i> Edición y retoque profesional</li>
+                </ul>
+                <div class="service-actions">
+                  <a href="/servicios.html#fotografia" class="btn btn-primary btn-sm">Ver más</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="service-card">
+              <div class="service-img">
+                <img src="https://placehold.co/720x450/444/FF5E14?text=Eventos" srcset="
+                    https://placehold.co/720x450/444/FF5E14?text=Eventos+720w 720w,
+                    https://placehold.co/1536x960/444/FF5E14?text=Eventos+1536w 1536w,
+                    https://placehold.co/1920x1200/444/FF5E14?text=Eventos+1920w 1920w"
+                  sizes="(max-width:767px)100vw,(max-width:1199px)50vw,33vw" loading="lazy"
+                  alt="Cobertura de Eventos Sociales en Chincha" class="object-cover w-full" />
+                <div class="service-overlay">
+                  <a href="/servicios.html#eventos" class="btn btn-circle"
+                    aria-label="Ver detalles de Eventos Sociales"><i class="fas fa-arrow-right"></i></a>
+                </div>
+              </div>
+              <div class="service-content">
+                <h3>Eventos Sociales</h3>
+                <p>Cobertura completa para bodas, cumpleaños, aniversarios y todo tipo de celebraciones especiales.</p>
+                <ul class="service-features">
+                  <li><i class="fas fa-check"></i> Cobertura integral</li>
+                  <li><i class="fas fa-check"></i> Fotografía y video emotivo</li>
+                  <li><i class="fas fa-check"></i> Álbumes y entregables de lujo</li>
+                </ul>
+                <div class="service-actions">
+                  <a href="/servicios.html#eventos" class="btn btn-primary btn-sm">Ver más</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="service-card">
+              <div class="service-img">
+                <img src="https://placehold.co/720x450/555/FF5E14?text=Video" srcset="
+                    https://placehold.co/720x450/555/FF5E14?text=Video+720w 720w,
+                    https://placehold.co/1536x960/555/FF5E14?text=Video+1536w 1536w,
+                    https://placehold.co/1920x1200/555/FF5E14?text=Video+1920w 1920w"
+                  sizes="(max-width:767px)100vw,(max-width:1199px)50vw,33vw" loading="lazy"
+                  alt="Servicio de Producción Audiovisual en Chincha" class="object-cover w-full" />
+                <div class="service-overlay">
+                  <a href="/servicios.html#produccion" class="btn btn-circle"
+                    aria-label="Ver detalles de Producción Audiovisual"><i class="fas fa-arrow-right"></i></a>
+                </div>
+              </div>
+              <div class="service-content">
+                <h3>Producción Audiovisual</h3>
+                <p>Videos corporativos, promocionales, documentales, videoclips y contenido creativo para marcas.</p>
+                <ul class="service-features">
+                  <li><i class="fas fa-check"></i> Guion y preproducción</li>
+                  <li><i class="fas fa-check"></i> Filmación 4K y HD</li>
+                  <li><i class="fas fa-check"></i> Edición y postproducción avanzada</li>
+                </ul>
+                <div class="service-actions">
+                  <a href="/servicios.html#produccion" class="btn btn-primary btn-sm">Ver más</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="text-center mt-5 pt-3">
+          <a href="/servicios.html" class="btn btn-primary btn-lg">
+            <i class="fas fa-camera-retro me-2"></i> Ver Todos los Servicios
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="portafolio-destacado" class="portfolio-highlight-section section-padding">
+      <div class="container">
+        <div class="section-header text-center">
+          <h2 class="section-title-1">Nuestro <span>Trabajo</span></h2>
+          <p class="section-subtitle-1">Un vistazo a la calidad y creatividad que define a ISHUME.</p>
+        </div>
+        <div class="row g-4 justify-content-center">
+          <div class="col-lg-4 col-md-6">
+            <div class="service-card portfolio-card">
+              <div class="service-img">
+                <img src="https://placehold.co/720x500/FF5E14/333?text=Proyecto+Alfa"
+                  alt="Proyecto Alfa - Productora ISHUME" class="object-cover w-full">
+                <div class="service-overlay">
+                  <a href="/portafolio.html#proyecto-alfa" class="btn btn-circle" aria-label="Ver Proyecto Alfa"><i
+                      class="fas fa-play"></i></a>
+                </div>
+              </div>
+              <div class="service-content">
+                <h3>Proyecto Alfa Eventos</h3>
+                <p>Cobertura cinematográfica de un evento corporativo de alto impacto para cliente X.</p>
+                <div class="service-actions">
+                  <a href="/portafolio.html#proyecto-alfa" class="btn btn-primary btn-sm">Ver Proyecto</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="service-card portfolio-card">
+              <div class="service-img">
+                <img src="https://placehold.co/720x500/333/FF5E14?text=Proyecto+Beta"
+                  alt="Proyecto Beta - Productora ISHUME" class="object-cover w-full">
+                <div class="service-overlay">
+                  <a href="/portafolio.html#proyecto-beta" class="btn btn-circle" aria-label="Ver Proyecto Beta"><i
+                      class="fas fa-play"></i></a>
+                </div>
+              </div>
+              <div class="service-content">
+                <h3>Video Documental "Raíces"</h3>
+                <p>Exploración visual de las tradiciones culturales de Chincha, galardonado localmente.</p>
+                <div class="service-actions">
+                  <a href="/portafolio.html#proyecto-beta" class="btn btn-primary btn-sm">Ver Proyecto</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="service-card portfolio-card">
+              <div class="service-img">
+                <img src="https://placehold.co/720x500/555/FF5E14?text=Showreel+ISHUME"
+                  alt="Showreel ISHUME Productora Audiovisual" class="object-cover w-full">
+                <div class="service-overlay">
+                  <a href="https://www.youtube.com/watch?v=VIDEO_ID_SHOWREEL" target="_blank" class="btn btn-circle"
+                    aria-label="Ver Showreel"><i class="fas fa-film"></i></a>
+                </div>
+              </div>
+              <div class="service-content">
+                <h3>Showreel ISHUME 2024</h3>
+                <p>Una compilación de nuestros mejores momentos y proyectos recientes. ¡Inspírate!</p>
+                <div class="service-actions">
+                  <a href="https://www.youtube.com/watch?v=VIDEO_ID_SHOWREEL" target="_blank"
+                    class="btn btn-primary btn-sm">Ver Showreel</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 text-center mt-5 pt-3 showreel-container">
+          <h3 class="section-title-1 mb-4">Nuestro <span>Showreel</span></h3>
+          <div class="ratio ratio-16x9 mx-auto" style="max-width: 800px;">
+            <iframe src="https://www.youtube.com/embed/VIDEO_ID_SHOWREEL" title="Showreel ISHUME Productora Audiovisual"
+              allowfullscreen loading="lazy"></iframe>
+          </div>
+        </div>
+        <div class="text-center mt-5 pt-3">
+          <a href="/portafolio.html" class="btn btn-primary btn-lg">
+            <i class="fas fa-photo-video me-2"></i> Ver Portafolio Completo
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="about-brief-section section-padding">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6">
+            <div class="experience-content">
+              <h2 class="section-title">Tu Visión, <span class="text-accent">Nuestra Pasión Audiovisual</span></h2>
+              <p class="text-p mt-3">
+                En ISHUME, somos más que una productora audiovisual en Chincha; somos artesanos de la imagen y el
+                sonido. Fusionamos creatividad, tecnología de punta y una dedicación incomparable para contar tu
+                historia de manera única e impactante. Ya sea un evento especial, un proyecto corporativo o una pieza
+                artística, nos comprometemos con la excelencia en cada fotograma.
+              </p>
+              <div class="experience-stats">
+                <div class="stat-item">
+                  <div class="stat-number" data-count="500">0</div>
+                  <div class="stat-label">Proyectos Entregados</div>
+                </div>
+                <div class="stat-item">
+                  <div class="stat-number" data-count="2">0</div>
+                  <div class="stat-label">Años de Trayectoria</div>
+                </div>
+                <div class="stat-item">
+                  <div class="stat-number" data-count="100">0</div>
+                  <div class="stat-label">Clientes Satisfechos</div>
+                </div>
+              </div>
+              <div class="mt-4 pt-2">
+                <a href="/nosotros.html" class="btn btn-primary">Conócenos Mejor</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="video-container ratio ratio-16x9">
+              <img src="https://placehold.co/1280x720/222/FF5E14?text=Equipo+ISHUME+en+Acción" class="img-fluid"
+                alt="Equipo de ISHUME Productora Audiovisual trabajando en Chincha">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="testimonios" class="testimonials-section section-padding">
+      <div class="container">
+        <div class="section-header text-center">
+          <h2 class="section-title-1">Opiniones de <span class="text-accent">Nuestros Clientes</span></h2>
+          <p class="section-subtitle-1">La satisfacción de quienes confían en nosotros es nuestra mejor carta de
+            presentación.</p>
+        </div>
+        <div class="row justify-content-center g-4">
+          <div class="col-lg-5 col-md-10">
+            <div class="testimonial-card-custom p-4 h-100">
+              <i class="fas fa-quote-left mb-3"></i>
+              <p class="fst-italic">"El equipo de ISHUME capturó la esencia de nuestra boda de una manera mágica. Cada
+                vez que vemos el video y las fotos, revivimos ese día especial. ¡Profesionales y muy creativos en
+                Chincha!"</p>
+              <p class="text-end fw-bold mt-4 mb-0">- Ana & Luis G.</p>
+              <p class="text-end text-muted small">Boda en Chincha</p>
+            </div>
+          </div>
+          <div class="col-lg-5 col-md-10">
+            <div class="testimonial-card-custom p-4 h-100">
+              <i class="fas fa-quote-left mb-3"></i>
+              <p class="fst-italic">"Necesitábamos un video corporativo que reflejara la innovación de nuestra empresa y
+                ISHUME lo logró con creces. Excelente servicio, comunicación fluida y un resultado final que superó
+                expectativas."</p>
+              <p class="text-end fw-bold mt-4 mb-0">- Carlos R., Gerente de Agroexportadora Sol Radiante</p>
+              <p class="text-end text-muted small">Video Corporativo</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="final-cta-section section-padding text-center">
+      <div class="container">
+        <h2>¿Tienes un Proyecto en Mente?</h2>
+        <p>
+          En ISHUME estamos listos para escuchar tus ideas y convertirlas en producciones audiovisuales que dejen
+          huella. Desde Chincha para el mundo. ¡Hablemos!
         </p>
-      </div>
-      <div class="row g-4">
-        <!-- Fotografía Profesional -->
-        <div class="col-lg-4 col-md-6">
-          <div class="service-card">
-            <div class="service-img">
-              <img
-                src="/images/fotografia/fotografia-720.jpg"
-                srcset="
-                  /images/fotografia/fotografia-720.jpg   720w,
-                  /images/fotografia/fotografia-1536.jpg 1536w,
-                  /images/fotografia/fotografia-1920.jpg 1920w
-                "
-                sizes="(max-width:767px)100vw,(max-width:1199px)50vw,33vw"
-                loading="lazy"
-                alt="Fotografía Profesional"
-                class="object-cover w-full"
-              />
-              <div class="service-overlay">
-                <a href="/servicios.html" class="btn btn-circle"><i class="fas fa-expand"></i></a>
-              </div>
-            </div>
-            <div class="service-content">
-              <h3>Fotografía Profesional</h3>
-              <p>Capturamos momentos únicos en estudio o en locación con equipo profesional</p>
-              <ul class="service-features">
-                <li><i class="fas fa-check"></i> Sesiones personalizadas</li>
-                <li><i class="fas fa-check"></i> Equipo de alta gama</li>
-                <li><i class="fas fa-check"></i> Edición profesional</li>
-              </ul>
-              <div class="service-actions">
-                <a href="/servicios.html" class="btn btn-primary btn-sm">Ver más</a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Eventos Sociales -->
-        <div class="col-lg-4 col-md-6">
-          <div class="service-card">
-            <div class="service-img">
-              <img
-                src="/images/cumpleanos-adulto/cumpleanos-adulto-720.jpg"
-                srcset="
-                  /images/cumpleanos-adulto/cumpleanos-adulto-720.jpg   720w,
-                  /images/cumpleanos-adulto/cumpleanos-adulto-1536.jpg 1536w,
-                  /images/cumpleanos-adulto/cumpleanos-adulto-1920.jpg 1920w
-                "
-                sizes="(max-width:767px)100vw,(max-width:1199px)50vw,33vw"
-                loading="lazy"
-                alt="Eventos Sociales"
-                class="object-cover w-full"
-              />
-              <div class="service-overlay">
-                <a href="/servicios.html" class="btn btn-circle"><i class="fas fa-expand"></i></a>
-              </div>
-            </div>
-            <div class="service-content">
-              <h3>Eventos Sociales</h3>
-              <p>Cumpleaños, aniversarios y celebraciones especiales</p>
-              <ul class="service-features">
-                <li><i class="fas fa-check"></i> Cobertura completa</li>
-                <li><i class="fas fa-check"></i> Fotografía y video</li>
-                <li><i class="fas fa-check"></i> Álbumes digitales</li>
-              </ul>
-              <div class="service-actions">
-                <a href="/servicios.html" class="btn btn-primary btn-sm">Ver más</a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Producción Audiovisual -->
-        <div class="col-lg-4 col-md-6">
-          <div class="service-card">
-            <div class="service-img">
-              <img
-                src="/images/promocion/368-720.jpg"
-                srcset="
-                  /images/promocion/368-720.jpg   720w,
-                  /images/promocion/368-1536.jpg 1536w,
-                  /images/promocion/368-1920.jpg 1920w
-                "
-                sizes="(max-width:767px)100vw,(max-width:1199px)50vw,33vw"
-                loading="lazy"
-                alt="Producción Audiovisual"
-                class="object-cover w-full"
-              />
-              <div class="service-overlay">
-                <a href="/servicios.html" class="btn btn-circle"><i class="fas fa-expand"></i></a>
-              </div>
-            </div>
-            <div class="service-content">
-              <h3>Producción Audiovisual</h3>
-              <p>Videos promocionales, clips musicales y contenido profesional</p>
-              <ul class="service-features">
-                <li><i class="fas fa-check"></i> Guión y storyboard</li>
-                <li><i class="fas fa-check"></i> Filmación profesional</li>
-                <li><i class="fas fa-check"></i> Edición avanzada</li>
-              </ul>
-              <div class="service-actions">
-                <a href="/servicios.html" class="btn btn-primary btn-sm">Ver más</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="text-center mt-5">
-        <a href="/servicios.html" class="btn btn-primary btn-lg">
-          <i class="fas fa-camera me-2"></i> Ver todos los servicios
+        <a href="/contacto.html" class="btn btn-primary btn-lg">
+          <i class="fas fa-paper-plane me-2"></i> Contáctanos Ahora
         </a>
       </div>
-    </div>
-  </section>
+    </section>
+  </main>
 
-  <!-- FOOTER PREMIUM -->
   <footer class="footer">
     <div class="container">
-      <div class="row">
-        <div class="col-lg-4"><h4 class="logo-brand-1">ISHUME</h4><p>Capturando momentos, creando recuerdos eternos con pasión y profesionalismo.</p></div>
-        <div class="col-lg-4">
+      <div class="row gy-4">
+        <div class="col-lg-4 col-md-12 text-center text-lg-start">
+          <a href="index.html" class="logo-brand-1">ISHUME</a>
+          <p class="mt-2">Capturando momentos, creando recuerdos eternos con pasión y profesionalismo en el corazón de
+            Chincha.</p>
+        </div>
+        <div class="col-lg-2 col-md-4">
           <div class="footer-links">
-            <h4>Enlaces rápidos</h4>
+            <h4>Navegación</h4>
             <ul>
+              <li><a href="index.html">Inicio</a></li>
+              <li><a href="/nosotros.html">Nosotros</a></li>
               <li><a href="/servicios.html">Servicios</a></li>
               <li><a href="/portafolio.html">Portafolio</a></li>
               <li><a href="/contacto.html">Contacto</a></li>
             </ul>
           </div>
         </div>
-        
+        <div class="col-lg-3 col-md-4">
+          <div class="footer-links">
+            <h4>Servicios Clave</h4>
+            <ul>
+              <li><a href="/servicios.html#fotografia">Fotografía Profesional</a></li>
+              <li><a href="/servicios.html#eventos">Eventos Sociales</a></li>
+              <li><a href="/servicios.html#produccion">Producción Audiovisual</a></li>
+              <li><a href="/servicios.html#corporativo">Videos Corporativos</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-4">
+          <div class="footer-contact">
+            <h4>Contáctanos</h4>
+            <ul class="list-unstyled">
+              <li><i class="fas fa-map-marker-alt"></i> Chincha, Ica, Perú</li>
+              <li><i class="fas fa-phone"></i> <a href="tel:+51991157028">+51 991 157 028</a></li>
+              <li><i class="fas fa-envelope"></i> <a href="mailto:contacto@ishume.com">contacto@ishume.com</a></li>
+            </ul>
+            <div class="social-icons-footer d-flex mt-3 justify-content-center justify-content-lg-start">
+              <a href="https://www.facebook.com/share/1RpNuWeJy7/" target="_blank" class="social-icon me-2"
+                aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+              <a href="https://www.instagram.com/ishume_productora_audiovisual" target="_blank" class="social-icon me-2"
+                aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+              <a href="https://wa.me/51991157028" target="_blank" class="social-icon" aria-label="WhatsApp"><i
+                  class="fab fa-whatsapp"></i></a>
+            </div>
+          </div>
+        </div>
       </div>
       <div class="footer-bottom">
-        <p>Ishume<sup>&trade;</sup> Productora Audiovisual. Todos los derechos reservados.</p>
+        <p>&copy; <span id="currentYear"></span> ISHUME<sup>&trade;</sup> Productora Audiovisual. Todos los derechos
+          reservados.</p>
+        <p>Diseñado con <i class="fas fa-heart text-accent"></i> en Chincha, Perú.</p>
       </div>
     </div>
   </footer>
 
-  <!-- WhatsApp flotante -->
-  <a href="https://web.whatsapp.com/send/?phone=51991157028&" class="whatsapp-float">
+  <a href="https://wa.me/51991157028?text=Hola%20ISHUME%2C%20estoy%20interesado%20en%20sus%20servicios." target="_blank"
+    class="whatsapp-float" aria-label="Contactar por WhatsApp">
     <i class="fab fa-whatsapp"></i>
   </a>
 
-  <!-- Scripts -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="/js/script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/script.js"></script>
 </body>
+
 </html>

@@ -1,98 +1,85 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const filters = document.querySelectorAll('.filter-item');
-  const items   = document.querySelectorAll('.portfolio-item');
+  // Inicializar AOS (Animate On Scroll)
+  AOS.init({
+    duration: 700, // Duración de la animación
+    easing: 'ease-out-cubic', // Curva de aceleración
+    once: true, // Animar solo una vez
+    delay: 50, // Retraso ligero
+    offset: 100, // Activar animación un poco antes de que el elemento esté completamente visible
+  });
 
-  filters.forEach(f => {
-    f.addEventListener('click', () => {
-      // desactivar anterior
-      document.querySelector('.filter-item.active').classList.remove('active');
-      // activar este
-      f.classList.add('active');
+  // Navbar scroll effect (Consistent with other pages)
+  const navbar = document.querySelector('.navbar');
+  if (navbar) {
+    window.addEventListener('scroll', function() {
+      navbar.classList.toggle('scrolled', window.scrollY > 50);
+    });
+  }
 
-      const filtro = f.dataset.filter.toLowerCase();
+  // Filtros del Portafolio
+  const filterItems = document.querySelectorAll('.filter-item');
+  const portfolioGridItems = document.querySelectorAll('.portfolio-item');
 
-      items.forEach(it => {
-        const cats = it.dataset.category.toLowerCase();
-        if (filtro === 'all' || cats.includes(filtro)) {
-          it.style.display = 'block';
-        } else {
-          it.style.display = 'none';
-        }
+  if (filterItems.length > 0 && portfolioGridItems.length > 0) {
+    filterItems.forEach(filter => {
+      filter.addEventListener('click', function() {
+        // Manejar clase activa para el filtro
+        filterItems.forEach(item => item.classList.remove('active'));
+        this.classList.add('active');
+
+        const selectedFilter = this.getAttribute('data-filter').toLowerCase();
+
+        portfolioGridItems.forEach(item => {
+          const itemCategories = item.getAttribute('data-category').toLowerCase();
+          // Mostrar u ocultar item
+          if (selectedFilter === 'all' || itemCategories.includes(selectedFilter)) {
+            item.style.display = 'block';
+            // Re-inicializar AOS para items que se muestran si es necesario (opcional)
+            // setTimeout(() => { AOS.refreshHard(); }, 50); // Puede ser costoso
+          } else {
+            item.style.display = 'none';
+          }
+        });
       });
     });
-  });
+  }
 
-  // Animaciones para el proceso de trabajo
-  const processSteps = document.querySelectorAll('.process-step');
-  
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('animate__animated', 'animate__fadeInUp');
-        observer.unobserve(entry.target);
-      }
+  // Drag to scroll para la barra de filtros
+  const filterSlider = document.querySelector('.filter-nav-list');
+  if (filterSlider) {
+    let isDown = false;
+    let startX;
+    let scrollLeft;
+
+    filterSlider.addEventListener('mousedown', (e) => {
+      isDown = true;
+      filterSlider.classList.add('dragging');
+      startX = e.pageX - filterSlider.offsetLeft;
+      scrollLeft = filterSlider.scrollLeft;
     });
-  }, { threshold: 0.1 });
-  
-  processSteps.forEach(step => {
-    observer.observe(step);
-  });
-  
-  // Galería interactiva
-  const portfolioItems = document.querySelectorAll('.portfolio-item');
-  
-  portfolioItems.forEach(item => {
-    item.addEventListener('mouseenter', () => {
-      const img = item.querySelector('img');
-      img.style.transform = 'scale(1.05)';
+    filterSlider.addEventListener('mouseleave', () => {
+      isDown = false;
+      filterSlider.classList.remove('dragging');
     });
-    
-    item.addEventListener('mouseleave', () => {
-      const img = item.querySelector('img');
-      img.style.transform = 'scale(1)';
+    filterSlider.addEventListener('mouseup', () => {
+      isDown = false;
+      filterSlider.classList.remove('dragging');
     });
-  });
+    filterSlider.addEventListener('mousemove', (e) => {
+      if (!isDown) return;
+      e.preventDefault();
+      const x = e.pageX - filterSlider.offsetLeft;
+      const walk = (x - startX) * 2; // El multiplicador controla la velocidad del scroll
+      filterSlider.scrollLeft = scrollLeft - walk;
+    });
 
-  // Drag to scroll para filtros
-  const slider = document.querySelector('.filter-nav');
-  let isDown = false;
-  let startX;
-  let scrollLeft;
+  }
+  
+  // Current year para el footer (Consistent with other pages)
+  const currentYearSpan = document.getElementById('currentYear');
+  if (currentYearSpan) {
+    currentYearSpan.textContent = new Date().getFullYear();
+  }
 
-  slider.addEventListener('mousedown', e => {
-    isDown = true;
-    slider.classList.add('dragging');
-    startX = e.pageX - slider.offsetLeft;
-    scrollLeft = slider.scrollLeft;
-  });
-  slider.addEventListener('mouseleave', () => {
-    isDown = false;
-    slider.classList.remove('dragging');
-  });
-  slider.addEventListener('mouseup', () => {
-    isDown = false;
-    slider.classList.remove('dragging');
-  });
-  slider.addEventListener('mousemove', e => {
-    if (!isDown) return;
-    e.preventDefault();
-    const x = e.pageX - slider.offsetLeft;
-    const walk = (x - startX) * 2;
-    slider.scrollLeft = scrollLeft - walk;
-  });
 
-  // Scroll wheel convierte desplazamiento vertical en horizontal
-  slider.addEventListener('wheel', e => {
-    e.preventDefault();                 
-    slider.scrollLeft += e.deltaY;      
-  }, { passive: false });
-
-  // Navbar scroll effect
-  window.addEventListener('scroll', function() {
-    if (window.scrollY > 50) {
-      document.querySelector('.navbar').classList.add('scrolled');
-    } else {
-      document.querySelector('.navbar').classList.remove('scrolled');
-    }
-  });
 });

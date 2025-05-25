@@ -1,382 +1,446 @@
-/* PALETA DE COLORES PREMIUM */
+/* PALETA DE COLORES PREMIUM (Igual que en index.html) */
 :root {
-  --color-primary: #FF5E14; /* Naranja vibrante */
+  --color-primary: #FF5E14;
   --color-primary-dark: #E04E0A;
   --color-primary-light: #FF8C4D;
-  
-  --color-secondary: #1A1A1A; /* Negro profundo */
+  --color-secondary: #1A1A1A;
   --color-secondary-light: #2D2D2D;
-  
   --color-text: #FFFFFF;
   --color-text-light: #F0F0F0;
   --color-text-muted: #CCCCCC;
-  
-  --color-bg-dark: #ffffff;
+  --color-bg-dark: #121212;
   --color-bg-light: #1E1E1E;
-  
   --color-border: #333333;
+  --color-accent: #f7931e;
 }
 
-/* ESTILOS GENERALES */
+/* ESTILOS GENERALES (Igual que en index.html) */
 body {
   font-family: 'Montserrat', sans-serif;
-  background-color: white;
-  color: var(--color-secondary);
+  background-color: var(--color-bg-dark);
+  color: var(--color-text-light);
   line-height: 1.7;
   overflow-x: hidden;
   padding-top: 80px;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Montserrat', serif;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Montserrat', sans-serif;
+  /* Cambio a Montserrat */
   font-weight: 700;
-  color: var(--color-secondary);
+  /* Ajustar según necesidad */
+  color: var(--color-text);
+  line-height: 1.3;
+  /* Ajustado para Montserrat */
 }
 
-
-.bg-dark-custom {
-  background-color: var(--color-secondary);
+a {
+  text-decoration: none;
+  transition: all 0.3s ease;
+  color: var(--color-primary);
 }
 
-/* NAVBAR PREMIUM */
+a:hover {
+  color: var(--color-primary-light);
+}
+
+.text-primary {
+  color: var(--color-primary) !important;
+}
+
+.text-accent {
+  color: var(--color-accent) !important;
+}
+
+/* NAVBAR PREMIUM (Igual que en index.html) */
 .navbar {
-  background-color: rgba(26, 26, 26, 0.95);
-  backdrop-filter: blur(10px);
+  background-color: rgba(18, 18, 18, 0.85) !important;
+  backdrop-filter: blur(12px);
   padding: 15px 0;
+  border-bottom: 1px solid var(--color-border);
   transition: all 0.4s ease;
 }
 
 .navbar.scrolled {
   padding: 10px 0;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+  background-color: rgba(18, 18, 18, 0.95) !important;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
 }
 
 .logo-brand {
-  font-family: 'Montserrat', serif;
+  font-family: 'Montserrat', sans-serif;
+  /* Cambio a Montserrat */
   font-size: 28px;
   font-weight: 800;
-  color: white;
-  position: relative;
+  color: var(--color-text) !important;
+  letter-spacing: 1px;
 }
 
-.logo-brand::after {
-  content: '';
-  position: absolute;
-  bottom: -5px;
-  left: 0;
-  width: 100%;
-  height: 2px;
-  background-color: var(--color-accent);
+.logo-brand:hover {
+  color: var(--color-accent) !important;
 }
 
 .nav-link {
   font-weight: 600;
   font-size: 15px;
-  letter-spacing: 1px;
-  padding: 8px 20px !important;
-  color: #f7931e;
+  letter-spacing: 0.5px;
+  padding: 8px 18px !important;
+  color: var(--color-text-muted) !important;
   position: relative;
+  text-transform: uppercase;
 }
 
 .nav-link::before {
   content: '';
   position: absolute;
-  bottom: 0;
-  left: 20px;
+  bottom: -2px;
+  left: 18px;
   width: 0;
   height: 2px;
-  background-color: white;
+  background-color: var(--color-accent);
   transition: width 0.3s ease;
 }
 
-.nav-link:hover::before {
-  width: calc(100% - 40px);
-}
-
-.nav-link:hover {
-  color: white;
-}
-
+.nav-link:hover,
 .nav-link.active {
-  color: white;
+  color: var(--color-text) !important;
 }
 
+.nav-link:hover::before,
 .nav-link.active::before {
-  width: calc(100% - 40px);
+  width: calc(100% - 36px);
 }
 
-.social-icon {
+.navbar-toggler {
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28247, 147, 30, 0.9%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+.social-icons .social-icon {
   width: 36px;
   height: 36px;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--color-text);
-  margin: 0 8px;
+  color: var(--color-text-muted);
+  margin: 0 5px;
   transition: all 0.3s ease;
   border: 1px solid var(--color-border);
-  text-decoration: none !important;
+  font-size: 14px;
 }
 
-.social-icon:hover {
-  background-color: var(--color-primary);
+.social-icons .social-icon:hover {
+  background-color: var(--color-accent);
   color: white;
-  border-color: var(--color-primary);
-  transform: translateY(-3px);
+  border-color: var(--color-accent);
+  transform: translateY(-2px);
 }
 
-.social-icons {
-  display: flex;
-  gap: 15px;
+/* ESTILOS COMUNES DE SECCIÓN (Igual que en index.html) */
+.section-padding {
+  padding: 80px 0;
 }
 
-.social-icon {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
+.section-header {
+  margin-bottom: 60px;
+  position: relative;
+}
+
+.section-title-1 {
+  /* Título para secciones principales */
+  font-size: clamp(2.2rem, 5vw, 3rem);
+  font-weight: 700;
+  /* Ajustado para Montserrat */
+  margin-bottom: 15px;
+  position: relative;
+  display: inline-block;
+  color: var(--color-text);
+}
+
+.section-title-1 span {
+  color: var(--color-accent);
+}
+
+.section-subtitle-1 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(1rem, 2vw, 1.1rem);
+  color: var(--color-text-muted);
+  max-width: 700px;
+  margin: 0 auto;
+  font-weight: 400;
+}
+
+/* HERO SECTION NOSOTROS */
+.hero-section-nosotros {
+  background: linear-gradient(rgba(18, 18, 18, 0.85), rgba(18, 18, 18, 0.85)), url('https://placehold.co/1920x800/121212/FF5E14?text=Equipo+ISHUME+Abstract') no-repeat center center;
+  background-size: cover;
+  color: var(--color-text);
+  padding: 120px 0;
+  min-height: 60vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: rgba(255, 255, 255, 0.1);
-  color: white;
-  transition: all 0.3s ease;
-}
-
-.social-icon:hover {
-  background-color: var(--color-secondary);
-  color: var(--color-primary);
-  transform: translateY(-3px);
-}
-
-/* HERO SECTION */
-.hero-section {
-  background-color: var(--color-secondary);
-  color: white;
-  padding: 100px 0;
   position: relative;
-  overflow: hidden;
 }
 
-.hero-section::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(rgba(26, 26, 26, 0.9), rgba(26, 26, 26, 0.7));
-  z-index: 1;
-}
-
-.hero-content {
-  position: relative;
-  z-index: 2;
-}
-
-.hero-title {
-  font-size: 3.5rem;
-  font-weight: 800;
-  margin-bottom: 1.5rem;
-  color: white;
-}
-
-.hero-subtitle {
-  font-size: 1.2rem;
-  max-width: 600px;
-  margin: 0 auto 2rem;
-  color: var(--color-text-light);
-}
-
-/* ABOUT SECTION */
-.about-section {
-  padding: 100px 0;
-  background-color: white;
-}
-
-.section-title {
-  font-size: 2.5rem;
+.hero-section-nosotros .hero-title {
+  color: var(--color-text);
+  font-size: clamp(2.8rem, 7vw, 4.5rem);
   font-weight: 700;
-  margin-bottom: 1.5rem;
-  color: var(--color-secondary);
-  position: relative;
-  padding-bottom: 15px;
+  /* Ajustado para Montserrat */
+  margin-bottom: 0.5em;
 }
 
-.section-title::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 80px;
-  height: 4px;
-  background-color: var(--color-primary);
+.hero-section-nosotros .hero-title span {
+  color: var(--color-accent);
+}
+
+.hero-section-nosotros .hero-subtitle {
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(1.1rem, 3vw, 1.3rem);
+  color: var(--color-text-light);
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  font-weight: 300;
+}
+
+/* ABOUT SECTION (QUIÉNES SOMOS) */
+.about-section {
+  background-color: var(--color-bg-light);
 }
 
 .about-text {
-  font-size: 1.1rem;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.05rem;
+  color: var(--color-text-light);
   line-height: 1.8;
-  color: var(--color-secondary-light);
+  margin-bottom: 1.5rem;
+  font-weight: 300;
+}
+
+.video-container {
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.video-container iframe {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 /* TEAM SECTION */
 .team-section {
-  padding: 100px 0;
-  background-color: #f8f9fa;
+  background-color: var(--color-bg-dark);
 }
 
 .team-card {
-  background-color: white;
-  border-radius: 10px;
+  background-color: var(--color-secondary);
+  border-radius: 15px;
   overflow: hidden;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-  transition: all 0.3s ease;
-  margin-bottom: 30px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  /* Efecto más elástico */
+  height: 100%;
+  border: 1px solid var(--color-border);
+  display: flex;
+  flex-direction: column;
 }
 
 .team-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+  transform: translateY(-12px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  border-color: var(--color-accent);
+}
+
+.team-img-container {
+  height: 380px;
+  /* Altura fija para consistencia */
+  overflow: hidden;
+  position: relative;
 }
 
 .team-img {
-  height: 350px;
-  overflow: hidden;
-}
-
-.team-img img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.5s ease;
+  object-position: center top;
+  /* Ajustar si las caras quedan cortadas */
+  transition: transform 0.5s ease, filter 0.5s ease;
 }
 
-.team-card:hover .team-img img {
-  transform: scale(1.05);
+.team-card:hover .team-img {
+  transform: scale(1.1);
+  filter: saturate(1.2);
 }
 
 .team-info {
   padding: 25px;
   text-align: center;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .team-name {
-  font-size: 1.3rem;
+  font-family: 'Montserrat', sans-serif;
+  /* Cambio a Montserrat */
+  font-size: 1.6rem;
   font-weight: 700;
   margin-bottom: 5px;
-  color: var(--color-secondary);
+  color: var(--color-text);
 }
 
 .team-position {
-  color: var(--color-primary);
+  color: var(--color-accent);
   font-weight: 600;
   margin-bottom: 15px;
   display: block;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
 .team-bio {
-  color: var(--color-secondary-light);
-  font-size: 0.95rem;
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  flex-grow: 1;
 }
 
 .team-social {
-  margin-top: 15px;
+  margin-top: auto;
+  /* Empuja los iconos sociales al final */
 }
 
 .team-social a {
   display: inline-block;
-  width: 35px;
-  height: 35px;
+  width: 38px;
+  height: 38px;
   border-radius: 50%;
-  background-color: #f0f0f0;
-  color: var(--color-secondary);
+  background-color: rgba(255, 255, 255, 0.08);
+  color: var(--color-text-muted);
   text-align: center;
-  line-height: 35px;
-  margin: 0 5px;
+  line-height: 38px;
+  margin: 0 6px;
   transition: all 0.3s ease;
+  font-size: 1rem;
 }
 
 .team-social a:hover {
-  background-color: var(--color-primary);
+  background-color: var(--color-accent);
   color: white;
+  transform: scale(1.1);
 }
 
-/* Jefa destacada */
 .team-leader {
   position: relative;
   z-index: 1;
 }
 
 .team-leader .team-card {
-  border: 3px solid var(--color-primary);
+  border: 2px solid var(--color-accent);
 }
 
-.team-leader .team-position {
-  font-size: 1.1rem;
+.team-leader .team-name {
+  font-size: 1.8rem;
+  color: var(--color-accent);
 }
 
 .team-leader-badge {
   position: absolute;
-  top: -15px;
-  right: -15px;
-  background-color: var(--color-primary);
-  color: white;
-  width: 60px;
-  height: 60px;
+  top: -20px;
+  right: -20px;
+  background-color: var(--color-accent);
+  color: var(--color-secondary);
+  width: 55px;
+  height: 55px;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   z-index: 2;
   box-shadow: 0 5px 15px rgba(247, 147, 30, 0.3);
+  border: 3px solid var(--color-bg-dark);
 }
 
 /* VALUES SECTION */
 .values-section {
-  padding: 100px 0;
-  background-color: var(--color-secondary);
-  color: white;
+  background-color: var(--color-bg-light);
 }
 
 .value-card {
-  background-color: rgba(255, 255, 255, 0.05);
-  border-radius: 10px;
-  padding: 40px 30px;
+  background-color: var(--color-secondary);
+  border-radius: 15px;
+  padding: 35px 30px;
   text-align: center;
   transition: all 0.3s ease;
   height: 100%;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid var(--color-border);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .value-card:hover {
-  background-color: rgba(255, 94, 20, 0.1);
-  border-color: var(--color-primary);
-  transform: translateY(-5px);
+  background-color: var(--color-secondary-light);
+  border-color: var(--color-accent);
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
 }
 
 .value-icon {
-  font-size: 3rem;
-  color: var(--color-primary);
+  font-size: 2.8rem;
+  color: var(--color-accent);
   margin-bottom: 20px;
+  line-height: 1;
+  transition: transform 0.3s ease;
+}
+
+.value-card:hover .value-icon {
+  transform: scale(1.1) rotate(-5deg);
 }
 
 .value-title {
-  font-size: 1.3rem;
-  font-weight: 700;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.4rem;
+  font-weight: 600;
   margin-bottom: 15px;
-  color: white;
+  color: var(--color-text);
 }
 
 .value-text {
   color: var(--color-text-muted);
+  font-size: 0.9rem;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+  line-height: 1.7;
+  flex-grow: 1;
 }
 
-/* FOOTER PREMIUM */
+/* FOOTER PREMIUM (Igual que en index.html) */
 .footer {
   background-color: var(--color-secondary);
-  padding: 80px 0 30px;
+  padding: 70px 0 20px;
   position: relative;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .footer::before {
@@ -385,145 +449,221 @@ h1, h2, h3, h4, h5, h6 {
   top: 0;
   left: 0;
   width: 100%;
-  height: 1px;
+  height: 2px;
+  background: var(--color-accent);
 }
 
-.footer-brand .logo-brand {
-  font-size: 24px;
-}
-
-.footer-brand p {
-  color: var(--color-text-muted);
-  margin-top: 20px;
-  font-size: 14px;
+.footer .logo-brand-1 {
   font-family: 'Montserrat', sans-serif;
+  /* Cambio a Montserrat */
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--color-text);
+  margin-bottom: 15px;
+  display: inline-block;
 }
 
-.footer-links h4 {
-  font-size: 18px;
-  margin-bottom: 25px;
+.footer .logo-brand-1:hover {
+  color: var(--color-accent);
+}
+
+.footer p {
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.footer-links h4,
+.footer-contact h4 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 20px;
   color: var(--color-text);
   position: relative;
   padding-bottom: 10px;
-  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
-.footer-links h4::after {
+.footer-links h4::after,
+.footer-contact h4::after {
   content: '';
   position: absolute;
   bottom: 0;
   left: 0;
-  width: 40px;
+  width: 30px;
   height: 2px;
-  background-color: #f7931e;
+  background-color: var(--color-accent);
 }
 
-.footer-links ul {
+.footer-links ul,
+.footer-contact ul {
   list-style: none;
   padding: 0;
 }
 
-.footer-links li {
-  margin-bottom: 12px;
+.footer-links li,
+.footer-contact li {
+  margin-bottom: 10px;
 }
 
-.footer-links a {
+.footer-links a,
+.footer-contact a {
   color: var(--color-text-muted);
-  font-size: 14px;
+  font-size: 0.9rem;
   transition: all 0.3s ease;
-  text-decoration: none;
 }
 
-.footer-links a:hover {
-  color: var(--color-primary);
+.footer-links a:hover,
+.footer-contact a:hover {
+  color: var(--color-accent);
   padding-left: 5px;
 }
 
-.footer-bottom {
-  margin-top: 60px;
-  padding-top: 30px;
-  border-top: 1px solid var(--color-border);
-  text-align: center;
+.footer-contact i {
+  color: var(--color-accent);
+  margin-right: 8px;
+  width: 20px;
 }
 
-.footer-bottom p {
+.social-icons-footer .social-icon {
+  width: 38px;
+  height: 38px;
+  background-color: rgba(255, 255, 255, 0.05);
   color: var(--color-text-muted);
-  font-size: 12px;
-  margin: 0;
+  border: 1px solid var(--color-border);
 }
 
-/* WHATSAPP FLOTANTE */
+.social-icons-footer .social-icon:hover {
+  background-color: var(--color-accent);
+  color: white;
+  border-color: var(--color-accent);
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 50px;
+  border-top: 1px solid var(--color-border);
+  padding-top: 30px;
+  color: var(--color-text-muted);
+  font-size: 0.85rem;
+}
+
+.footer-bottom p sup {
+  font-size: 0.7em;
+}
+
+/* WHATSAPP FLOTANTE (Igual que en index.html) */
 .whatsapp-float {
   position: fixed;
-  width: 60px;
-  height: 60px;
-  bottom: 30px;
-  right: 30px;
+  width: 55px;
+  height: 55px;
+  bottom: 25px;
+  right: 25px;
   background-color: #25D366;
   color: white;
-  border-radius: 50px;
+  border-radius: 50%;
   text-align: center;
-  font-size: 30px;
-  box-shadow: 0 5px 15px rgba(37, 211, 102, 0.3);
-  z-index: 100;
+  font-size: 28px;
+  box-shadow: 0 5px 15px rgba(37, 211, 102, 0.4);
+  z-index: 1030;
   display: flex;
   align-items: center;
   justify-content: center;
   transition: all 0.3s ease;
-  border: none;
-  text-decoration: none;
 }
 
 .whatsapp-float:hover {
-  background-color: #128C7E;
-  transform: scale(1.1);
+  background-color: #1DA851;
+  transform: scale(1.1) rotate(10deg);
+  box-shadow: 0 8px 20px rgba(37, 211, 102, 0.5);
 }
 
-/* RESPONSIVE */
-@media (max-width: 1199px) {
-  .hero-title {
-    font-size: 3rem;
+.whatsapp-float i {
+  line-height: 1;
+}
+
+/* SCROLLBAR PERSONALIZADA (Igual que en index.html) */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-bg-dark);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--color-accent);
+  border-radius: 10px;
+  border: 2px solid var(--color-bg-dark);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--color-primary-dark);
+}
+
+
+/* RESPONSIVE ADJUSTMENTS */
+@media (max-width: 991.98px) {
+  body {
+    padding-top: 70px;
+  }
+
+  .hero-section-nosotros {
+    min-height: 50vh;
+    padding: 100px 0;
+  }
+
+  .team-img-container {
+    height: 320px;
+  }
+
+  .footer .row>div {
+    margin-bottom: 30px;
+  }
+
+  .footer-links h4,
+  .footer-contact h4 {
+    text-align: center;
+  }
+
+  .footer-links h4::after,
+  .footer-contact h4::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .footer-links ul,
+  .footer-contact ul {
+    text-align: center;
   }
 }
 
-@media (max-width: 991px) {
-  .hero-title {
-    font-size: 2.5rem;
+@media (max-width: 767.98px) {
+  .team-img-container {
+    height: 350px;
   }
-  
-  .team-img {
-    height: 300px;
-  }
-}
 
-@media (max-width: 767px) {
-  .hero-title {
-    font-size: 2.2rem;
+  .team-leader {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 450px;
   }
-  
-  .hero-subtitle {
-    font-size: 1rem;
-  }
-  
-  .section-title {
-    font-size: 2rem;
-  }
-}
 
-@media (max-width: 575px) {
-  .logo-brand {
-    font-size: 24px;
+  .values-section .value-card {
+    padding: 30px 20px;
   }
-  
-  .hero-title {
-    font-size: 1.8rem;
+
+  .footer {
+    text-align: center;
   }
-  
-  .whatsapp-float {
-    width: 50px;
-    height: 50px;
-    font-size: 24px;
-    bottom: 20px;
-    right: 20px;
+
+  .footer-brand .logo-brand-1 {
+    text-align: center;
+  }
+
+  .social-icons-footer {
+    justify-content: center;
   }
 }
