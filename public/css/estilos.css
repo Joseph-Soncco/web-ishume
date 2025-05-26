@@ -4,34 +4,26 @@
   /* Naranja vibrante */
   --color-primary-dark: #E04E0A;
   --color-primary-light: #FF8C4D;
-
   --color-secondary: #1A1A1A;
   /* Negro profundo */
   --color-secondary-light: #2D2D2D;
-
   --color-text: #FFFFFF;
   --color-text-light: #F0F0F0;
   --color-text-muted: #CCCCCC;
-
   --color-bg-dark: #121212;
   --color-bg-light: #1E1E1E;
-
   --color-border: #333333;
   --color-accent: #f7931e;
-  /* Naranja de tu diseño original, lo usaré donde sea consistente */
 }
 
 /* ESTILOS GENERALES */
 body {
   font-family: 'Montserrat', sans-serif;
   background-color: var(--color-bg-dark);
-  /* Cambiado a fondo oscuro principal */
   color: var(--color-text-light);
-  /* Texto claro por defecto */
   line-height: 1.7;
   overflow-x: hidden;
   padding-top: 80px;
-  /* Ajustar si la altura de la navbar cambia */
 }
 
 h1,
@@ -41,25 +33,19 @@ h4,
 h5,
 h6 {
   font-family: 'Montserrat', sans-serif;
-  /* Cambio a Montserrat */
   font-weight: 700;
-  /* Ajustar según necesidad para Montserrat */
   color: var(--color-text);
   line-height: 1.3;
-  /* Ajustado para Montserrat */
 }
 
 .section-title-1 span,
 .hero-title span {
-  /* Para mantener el color naranja en los spans */
   color: var(--color-accent);
 }
 
 .section-title span {
-  /* Para la sección "Quiénes Somos" */
   color: var(--color-accent);
 }
-
 
 a {
   text-decoration: none;
@@ -71,7 +57,6 @@ a:hover {
   color: var(--color-primary-light);
 }
 
-/* TIPOGRAFÍA ESPECIAL */
 .text-primary {
   color: var(--color-primary) !important;
 }
@@ -85,7 +70,6 @@ a:hover {
   font-family: 'Montserrat', sans-serif;
   font-weight: 600;
   padding: 12px 28px;
-  /* Aumentado un poco el padding horizontal */
   border-radius: 50px;
   transition: all 0.3s ease;
   text-transform: uppercase;
@@ -102,15 +86,12 @@ a:hover {
 
 .btn-primary:hover {
   background-color: var(--color-primary-dark);
-  /* Usando variable de la paleta */
   border-color: var(--color-primary-dark);
   transform: translateY(-3px);
   box-shadow: 0 10px 20px rgba(247, 147, 30, 0.3);
-  /* Sombra con color accent */
 }
 
 .btn-outline-light {
-  /* Para Hero Section */
   border: 2px solid var(--color-text);
   color: var(--color-text);
 }
@@ -121,7 +102,6 @@ a:hover {
 }
 
 .btn-outline-dark {
-  /* Para Hero Section, si el fondo es claro */
   border: 2px solid var(--color-secondary);
   color: var(--color-secondary);
 }
@@ -131,17 +111,14 @@ a:hover {
   color: var(--color-text);
 }
 
-
 .btn-circle {
   width: 45px;
-  /* Aumentado tamaño */
   height: 45px;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: rgba(255, 255, 255, 0.1);
-  /* Más sutil */
   color: white;
   border: 1px solid rgba(255, 255, 255, 0.2);
   transition: all 0.3s ease;
@@ -154,10 +131,14 @@ a:hover {
   transform: scale(1.1);
 }
 
-/* NAVBAR PREMIUM */
+.service-card .service-actions .btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(247, 147, 30, 0.25);
+}
+
+/* NAVBAR */
 .navbar {
   background-color: rgba(18, 18, 18, 0.85) !important;
-  /* Ligeramente más oscuro y menos transparente */
   backdrop-filter: blur(12px);
   padding: 15px 0;
   border-bottom: 1px solid var(--color-border);
@@ -172,11 +153,9 @@ a:hover {
 
 .logo-brand {
   font-family: 'Montserrat', sans-serif;
-  /* Cambio a Montserrat */
   font-size: 28px;
   font-weight: 800;
   color: var(--color-text) !important;
-  /* Asegurar color */
   letter-spacing: 1px;
 }
 
@@ -188,11 +167,8 @@ a:hover {
   font-weight: 600;
   font-size: 15px;
   letter-spacing: 0.5px;
-  /* Ligeramente reducido */
   padding: 8px 18px !important;
-  /* Ajustado padding */
   color: var(--color-text-muted) !important;
-  /* Color base más suave */
   position: relative;
   text-transform: uppercase;
 }
@@ -201,7 +177,6 @@ a:hover {
   content: '';
   position: absolute;
   bottom: -2px;
-  /* Más cerca del texto */
   left: 18px;
   width: 0;
   height: 2px;
@@ -212,7 +187,6 @@ a:hover {
 .nav-link:hover,
 .nav-link.active {
   color: var(--color-text) !important;
-  /* Texto más brillante al hacer hover/active */
 }
 
 .nav-link:hover::before,
@@ -229,7 +203,6 @@ a:hover {
 }
 
 .social-icons .social-icon {
-  /* Estilos para iconos sociales en la navbar */
   width: 36px;
   height: 36px;
   border-radius: 50%;
@@ -238,7 +211,6 @@ a:hover {
   justify-content: center;
   color: var(--color-text-muted);
   margin: 0 5px;
-  /* Reducido margen */
   transition: all 0.3s ease;
   border: 1px solid var(--color-border);
   font-size: 14px;
@@ -251,138 +223,115 @@ a:hover {
   transform: translateY(-2px);
 }
 
-
-/* HERO SECTION DE LUJO */
+/* HERO SECTION DE LUJO - MEJORADO */
 .hero-section {
   position: relative;
   height: 100vh;
   min-height: 700px;
-  /* Reducido min-height para pantallas más pequeñas */
   overflow: hidden;
   display: flex;
-  /* Para centrar contenido verticalmente */
   align-items: center;
-  /* Para centrar contenido verticalmente */
-  background-color: var(--color-bg-dark);
-  /* Fondo si Three.js no cubre todo */
+  background-color: var(--color-bg-dark); /* Fondo oscuro base */
+  /* Considera una imagen de fondo sutil si Three.js no es suficiente */
+  /* background-image: linear-gradient(rgba(18,18,18,0.7), rgba(18,18,18,0.7)), url('tu-imagen-de-fondo-sutil.jpg'); */
+  /* background-size: cover; */
+  /* background-position: center; */
 }
 
-/* Si decides usar un video de fondo, descomenta esto y añade el tag <video> */
-/*
-    .hero-video {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transform: translate(-50%, -50%);
-      z-index: 1;
-    }
-    .hero-video-overlay {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(18, 18, 18, 0.6); // Overlay oscuro para legibilidad
-      z-index: 2;
-    }
-    */
+/* Overlay para mejorar contraste del texto sobre la animación */
+.hero-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(18, 18, 18, 0.5); /* Overlay oscuro semitransparente */
+  z-index: 1; /* Detrás del contenido, encima de Three.js si se posiciona con z-index menor */
+}
+
+
 .hero-section .container {
   position: relative;
-  z-index: 3;
-  /* Asegurar que el contenido esté sobre el overlay/video */
+  z-index: 2; /* Contenido del hero encima del overlay */
+}
+
+.hero-text-content { /* Nuevo div para agrupar texto y botones */
+    position: relative; /* Para z-index si es necesario */
+    z-index: 3; /* Asegurar que el texto esté al frente */
 }
 
 .hero-title {
-  font-size: clamp(2.5rem, 6vw, 4.5rem);
-  /* Responsive font size */
-  font-weight: 700;
-  /* Ajustado para Montserrat */
+  font-size: clamp(2.8rem, 7vw, 5rem); /* Ligeramente más grande y responsive */
+  font-weight: 800; /* Mantener o ajustar según Montserrat */
   color: var(--color-text);
-  margin-bottom: 0.5em;
-  line-height: 1.2;
-  /* Ajustado para Montserrat */
+  margin-bottom: 0.6em; /* Más espacio debajo del título */
+  line-height: 1.15;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.7); /* Sombra de texto más pronunciada */
+}
+
+.hero-title span {
+  color: var(--color-accent);
+  display: block; /* Hace que "en recuerdos eternos" pueda ir a una nueva línea naturalmente */
 }
 
 .hero-subtitle {
-  font-size: clamp(1rem, 2.5vw, 1.25rem);
-  /* Responsive font size */
+  font-size: clamp(1.1rem, 2.8vw, 1.4rem); /* Ligeramente más grande */
   color: var(--color-text-light);
-  max-width: 600px;
-  margin-top: 20px;
-  /* Ajustado */
-  margin-bottom: 30px;
-  /* Añadido */
+  max-width: 550px; /* Ajustar si es necesario */
+  margin-top: 0; /* Quitar margen superior si .hero-title ya tiene suficiente mb */
+  margin-bottom: 35px; /* Más espacio antes de los botones */
   font-family: 'Montserrat', sans-serif;
   font-weight: 300;
-}
-
-.hero-cta {
-  margin-top: 30px;
-  /* Ajustado */
+  line-height: 1.6;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
 }
 
 .hero-cta .btn {
-  padding: 15px 35px;
-  font-size: 16px;
+  padding: 16px 38px; /* Botones un poco más grandes */
+  font-size: 1rem; /* Tamaño de fuente del botón */
+  margin-right: 15px; /* Espacio entre botones */
+  min-width: 200px; /* Ancho mínimo para los botones */
+  text-align: center;
+}
+.hero-cta .btn:last-child {
+    margin-right: 0;
 }
 
+
 #threejs-container {
+  position: absolute; /* Posicionar absolutamente para que no afecte el flujo del texto */
+  top: 0;
+  left: 0;
   width: 100%;
-  height: 450px;
-  /* Ajusta según necesites */
-  position: relative;
+  height: 100%;
+  z-index: 0; /* Detrás del overlay y el contenido */
+  opacity: 0.7; /* Reducir un poco la opacidad de la animación si es muy brillante */
 }
 
 .scroll-indicator {
-  position: absolute;
-  bottom: 40px;
-  /* Aumentado espacio desde abajo */
-  left: 50%;
-  transform: translateX(-50%);
-  color: var(--color-accent);
-  /* Color naranja para visibilidad */
-  font-size: 28px;
-  /* Aumentado tamaño */
+  /* ... (sin cambios, pero asegúrate que su z-index sea alto, ej. 3 o más) ... */
   z-index: 3;
-  animation: bounce 2.5s infinite;
-  /* Ajustada velocidad */
 }
 
-@keyframes bounce {
-
-  0%,
-  20%,
-  50%,
-  80%,
-  100% {
-    transform: translateY(0) translateX(-50%);
-  }
-
-  40% {
-    transform: translateY(-25px) translateX(-50%);
-  }
-
-  60% {
-    transform: translateY(-12px) translateX(-50%);
-  }
+/* Ajustes para la columna de texto y la de animación si es necesario */
+.hero-section .row > .col-lg-6:first-child { /* Columna del texto */
+    /* background: rgba(0,0,0,0.3);  Podrías añadir un fondo sutil solo a la columna de texto */
+    /* padding: 20px; */
+    /* border-radius: 10px; */
 }
 
-/* ESTILOS COMUNES DE SECCIÓN */
+/* SECCIONES */
 .section-padding {
   padding: 80px 0;
 }
 
 .section-header {
   margin-bottom: 60px;
-  /* Reducido margen */
   position: relative;
 }
 
 .section-title {
-  /* Título para "Quiénes Somos" y similar */
   font-size: clamp(2.2rem, 5vw, 3rem);
   font-weight: 700;
   font-family: 'Montserrat', sans-serif;
@@ -393,19 +342,15 @@ a:hover {
 }
 
 .section-title-1 {
-  /* Título para Servicios, Portafolio (con span naranja) */
   font-size: clamp(2.2rem, 5vw, 3rem);
   font-weight: 700;
-  /* Ajustado para Montserrat */
   margin-bottom: 15px;
   position: relative;
   display: inline-block;
   color: var(--color-text);
-  /* Color base blanco */
 }
 
 .section-title-1 span {
-  /* El span será naranja */
   color: var(--color-accent);
 }
 
@@ -416,11 +361,9 @@ a:hover {
   max-width: 700px;
   margin: 0 auto;
   font-weight: 400;
-  /* Más ligero */
 }
 
 .text-p {
-  /* Párrafo en sección "Quiénes Somos" */
   font-family: 'Montserrat', sans-serif;
   font-size: 1.05rem;
   color: var(--color-text-light);
@@ -428,32 +371,28 @@ a:hover {
   font-weight: 300;
 }
 
-
-/* SECCIÓN SERVICIOS PREMIUM */
+/* SERVICIOS DESTACADOS */
 .services-section {
   background-color: var(--color-bg-light);
-  /* Fondo ligeramente diferente para alternar */
   position: relative;
   overflow: hidden;
 }
 
 .service-card {
   background-color: var(--color-secondary);
-  /* Más oscuro que --color-secondary-light */
   border-radius: 15px;
-  /* Más redondeado */
   overflow: hidden;
-  transition: all 0.4s ease;
+  transition: box-shadow 0.4s ease, border-color 0.4s ease;
   height: 100%;
   position: relative;
   border: 1px solid var(--color-border);
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, .2);
+  display: flex;
+  flex-direction: column;
 }
 
 .service-card:hover {
-  transform: translateY(-12px);
-  /* Mayor elevación */
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, .4);
   border-color: var(--color-accent);
 }
 
@@ -467,15 +406,12 @@ a:hover {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.5s ease, filter 0.5s ease;
-  /* Añadido filtro */
+  transition: transform .5s ease, filter .5s ease;
 }
 
 .service-card:hover .service-img img {
   transform: scale(1.08);
-  /* Reducido un poco el scale */
   filter: brightness(1.1);
-  /* Ligeramente más brillante */
 }
 
 .service-overlay {
@@ -484,15 +420,13 @@ a:hover {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.4) 50%, transparent 100%);
-  /* Gradiente más pronunciado */
+  background: linear-gradient(to top, rgba(0, 0, 0, .8) 0, rgba(0, 0, 0, .4) 50%, transparent 100%);
   display: flex;
   align-items: flex-end;
   justify-content: flex-end;
   padding: 20px;
   opacity: 0;
-  transition: opacity 0.4s ease;
-  /* Transición más suave */
+  transition: opacity .4s ease;
 }
 
 .service-card:hover .service-overlay {
@@ -501,14 +435,14 @@ a:hover {
 
 .service-content {
   padding: 30px;
-  /* Más padding */
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 .service-content h3 {
   font-family: 'Montserrat', sans-serif;
-  /* Montserrat para subtítulos de card */
   font-size: 1.5rem;
-  /* Ligeramente más grande */
   margin-bottom: 15px;
   color: var(--color-text);
   font-weight: 600;
@@ -517,8 +451,7 @@ a:hover {
 .service-content p {
   color: var(--color-text-muted);
   margin-bottom: 20px;
-  font-size: 0.95rem;
-  /* Ligeramente más pequeño */
+  font-size: .95rem;
   font-family: 'Montserrat', sans-serif;
   font-weight: 300;
 }
@@ -526,14 +459,14 @@ a:hover {
 .service-features {
   list-style: none;
   padding: 0;
-  margin: 0 0 25px 0;
+  margin: 0 0 25px;
   font-family: 'Montserrat', sans-serif;
+  flex-grow: 1;
 }
 
 .service-features li {
   margin-bottom: 12px;
-  /* Más espaciado */
-  font-size: 0.9rem;
+  font-size: .9rem;
   color: var(--color-text-light);
   display: flex;
   align-items: center;
@@ -543,61 +476,111 @@ a:hover {
 .service-features i {
   color: var(--color-accent);
   margin-right: 12px;
-  /* Más espaciado */
   font-size: 14px;
-  /* Ícono más grande */
   width: 18px;
-  /* Para alinear mejor */
   text-align: center;
 }
 
 .service-actions {
   display: flex;
   justify-content: flex-start;
-  /* Alineado a la izquierda */
   align-items: center;
   margin-top: 15px;
-  /* Espacio antes del botón */
+}
+
+.service-actions .btn-primary {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 
-/* PORTAFOLIO HIGHLIGHT SECTION */
+/* PORTAFOLIO DESTACADO */
 .portfolio-highlight-section {
   background-color: var(--color-bg-dark);
-  /* Fondo oscuro principal */
 }
 
-/* Puedes reutilizar .service-card o crear .portfolio-card si necesitas estilos diferentes */
-.portfolio-card .service-img {
-  /* O .portfolio-img */
+.portfolio-item-card {
+  background-color: var(--color-secondary);
+  border-radius: 15px;
+  overflow: hidden;
+  position: relative;
+  transition: transform .3s ease, box-shadow .3s ease;
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  border: 1px solid var(--color-border);
+  height: 100%;
+}
+
+.portfolio-item-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, .3);
+  border-color: var(--color-accent);
+}
+
+.portfolio-item-card .portfolio-img-wrapper {
   height: 280px;
-  /* Un poco más alto para portafolio */
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+  /* Para que el overlay se posicione correctamente */
 }
 
-.portfolio-card .service-content h3 {
-  /* O .portfolio-content h3 */
-  color: var(--color-accent);
-  /* Título del proyecto en naranja */
+.portfolio-item-card img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  transition: transform .5s ease;
+}
+
+.portfolio-item-card:hover img {
+  transform: scale(1.1);
+}
+
+.portfolio-item-overlay-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: linear-gradient(to top, rgba(18, 18, 18, .9) 0, rgba(18, 18, 18, .7) 50%, transparent 100%);
+  padding: 20px;
+  color: #fff;
+  opacity: 1;
+  transition: opacity .3s ease;
+  /* Asegurar que el contenido del overlay no cause que la card crezca */
+  box-sizing: border-box;
+}
+
+.portfolio-item-overlay-content h3 {
+  font-size: 1.5rem;
+  color: #fff;
+  margin-bottom: 5px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+}
+
+.portfolio-item-overlay-content p {
+  font-size: .9rem;
+  color: var(--color-text-muted);
+  margin-bottom: 0;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .showreel-container iframe {
   border-radius: 10px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, .3);
 }
 
-/* QUIÉNES SOMOS BREVE (Adaptación de Experience Section) */
+/* QUIÉNES SOMOS BREVE */
 .about-brief-section {
   background-color: var(--color-bg-light);
-  /* Fondo diferente al anterior */
 }
 
 .about-brief-section .experience-content {
-  /* Renombrado para claridad */
   padding-right: 30px;
-  /* Reducido padding */
 }
 
-@media (max-width: 991px) {
+@media (max-width:991px) {
   .about-brief-section .experience-content {
     padding-right: 0;
     margin-bottom: 40px;
@@ -608,45 +591,34 @@ a:hover {
   display: flex;
   margin-top: 40px;
   gap: 20px;
-  /* Reducido gap */
   flex-wrap: wrap;
-  /* Para que se ajusten en pantallas pequeñas */
 }
 
 .stat-item {
   text-align: center;
   flex-grow: 1;
-  /* Para que ocupen espacio disponible */
 }
 
 .stat-number {
   font-size: clamp(2.5rem, 5vw, 3.5rem);
   font-weight: 700;
-  /* Ajustado para Montserrat */
   color: var(--color-accent);
-  /* Color naranja para números */
   margin-bottom: 5px;
-  /* Reducido margen */
   font-family: 'Montserrat', sans-serif;
-  /* Cambio a Montserrat */
 }
 
 .stat-label {
-  font-size: 0.85rem;
-  /* Más pequeño */
+  font-size: .85rem;
   text-transform: uppercase;
   letter-spacing: 1.5px;
-  /* Reducido letter-spacing */
   color: var(--color-text-muted);
   font-family: 'Montserrat', sans-serif;
 }
 
 .video-container {
-  /* Para el video en "Quiénes Somos" */
   border-radius: 15px;
   overflow: hidden;
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
-  /* Sombra más pronunciada */
+  box-shadow: 0 15px 40px rgba(0, 0, 0, .5);
 }
 
 .video-container iframe,
@@ -656,11 +628,9 @@ a:hover {
   object-fit: cover;
 }
 
-
-/* TESTIMONIOS PREMIUM */
+/* TESTIMONIOS */
 .testimonials-section {
   background-color: var(--color-bg-dark);
-  /* Fondo oscuro principal */
 }
 
 .testimonial-card-custom {
@@ -669,27 +639,24 @@ a:hover {
   padding: 30px;
   height: 100%;
   border-left: 5px solid var(--color-accent);
-  transition: all 0.3s ease;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: all .3s ease;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, .1);
 }
 
 .testimonial-card-custom:hover {
   transform: translateY(-8px);
-  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, .2);
 }
 
 .testimonial-card-custom .fa-quote-left {
   color: var(--color-accent);
   font-size: 2rem;
-  /* Más grande */
   margin-bottom: 20px;
-  /* Más espacio */
 }
 
 .testimonial-card-custom p.fst-italic {
   color: var(--color-text-light);
   font-size: 1.05rem;
-  /* Ligeramente más grande */
   line-height: 1.7;
   margin-bottom: 20px;
   font-family: 'Montserrat', sans-serif;
@@ -707,35 +674,29 @@ a:hover {
   font-family: 'Montserrat', sans-serif;
 }
 
-/* FINAL CTA SECTION */
+/* CTA FINAL */
 .final-cta-section {
   background-color: var(--color-accent);
-  /* Fondo naranja */
   color: var(--color-secondary);
-  /* Texto oscuro para contraste */
 }
 
 .final-cta-section h2 {
   color: var(--color-secondary);
-  /* Texto oscuro */
   font-size: clamp(2rem, 5vw, 2.8rem);
   font-family: 'Montserrat', sans-serif;
-  /* Cambio a Montserrat */
   font-weight: 700;
 }
 
 .final-cta-section p {
   color: var(--color-secondary-light);
-  /* Texto oscuro pero más suave */
   font-size: clamp(1rem, 2.5vw, 1.2rem);
   max-width: 750px;
-  margin: 1.5rem auto 2.5rem auto;
+  margin: 1.5rem auto 2.5rem;
   font-family: 'Montserrat', sans-serif;
   font-weight: 400;
 }
 
 .final-cta-section .btn-primary {
-  /* Botón en CTA final */
   background-color: var(--color-secondary);
   border-color: var(--color-secondary);
   color: var(--color-text);
@@ -747,15 +708,13 @@ a:hover {
   background-color: var(--color-secondary-light);
   border-color: var(--color-secondary-light);
   color: var(--color-text);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, .2);
 }
 
-
-/* FOOTER PREMIUM */
+/* FOOTER */
 .footer {
   background-color: var(--color-secondary);
   padding: 70px 0 20px;
-  /* Ajustado padding */
   position: relative;
   font-family: 'Montserrat', sans-serif;
 }
@@ -767,15 +726,11 @@ a:hover {
   left: 0;
   width: 100%;
   height: 2px;
-  /* Más grueso */
   background: var(--color-accent);
-  /* Color sólido naranja */
 }
 
 .footer .logo-brand-1 {
-  /* Logo en footer */
   font-family: 'Montserrat', sans-serif;
-  /* Cambio a Montserrat */
   font-size: 28px;
   font-weight: 800;
   color: var(--color-text);
@@ -789,7 +744,7 @@ a:hover {
 
 .footer p {
   color: var(--color-text-muted);
-  font-size: 0.9rem;
+  font-size: .9rem;
   line-height: 1.6;
 }
 
@@ -797,15 +752,13 @@ a:hover {
 .footer-contact h4 {
   font-family: 'Montserrat', sans-serif;
   font-size: 1.1rem;
-  /* Más pequeño */
   font-weight: 600;
-  /* Menos bold */
   margin-bottom: 20px;
   color: var(--color-text);
   position: relative;
   padding-bottom: 10px;
   text-transform: uppercase;
-  letter-spacing: 0.5px;
+  letter-spacing: .5px;
 }
 
 .footer-links h4::after,
@@ -815,7 +768,6 @@ a:hover {
   bottom: 0;
   left: 0;
   width: 30px;
-  /* Más corto */
   height: 2px;
   background-color: var(--color-accent);
 }
@@ -834,8 +786,8 @@ a:hover {
 .footer-links a,
 .footer-contact a {
   color: var(--color-text-muted);
-  font-size: 0.9rem;
-  transition: all 0.3s ease;
+  font-size: .9rem;
+  transition: all .3s ease;
 }
 
 .footer-links a:hover,
@@ -848,121 +800,98 @@ a:hover {
   color: var(--color-accent);
   margin-right: 8px;
   width: 20px;
-  /* Para alinear */
 }
 
 .social-icons-footer .social-icon {
   width: 38px;
-  /* Ligeramente más grande */
   height: 38px;
-  background-color: rgba(255, 255, 255, 0.05);
+  background-color: rgba(255, 255, 255, .05);
   color: var(--color-text-muted);
   border: 1px solid var(--color-border);
 }
 
 .social-icons-footer .social-icon:hover {
   background-color: var(--color-accent);
-  color: white;
+  color: #fff;
   border-color: var(--color-accent);
 }
 
 .footer-bottom {
   text-align: center;
   margin-top: 50px;
-  /* Más espacio */
   border-top: 1px solid var(--color-border);
   padding-top: 30px;
-  /* Más padding */
   color: var(--color-text-muted);
-  font-size: 0.85rem;
+  font-size: .85rem;
 }
 
 .footer-bottom p sup {
-  font-size: 0.7em;
+  font-size: .7em;
 }
 
-
-/* SCROLLBAR PERSONALIZADA */
+/* SCROLLBAR */
 ::-webkit-scrollbar {
   width: 8px;
-  /* Más ancha */
 }
 
 ::-webkit-scrollbar-track {
   background: var(--color-bg-dark);
-  /* Track más oscuro */
 }
 
 ::-webkit-scrollbar-thumb {
   background-color: var(--color-accent);
   border-radius: 10px;
   border: 2px solid var(--color-bg-dark);
-  /* Borde para efecto flotante */
 }
 
 ::-webkit-scrollbar-thumb:hover {
   background-color: var(--color-primary-dark);
 }
 
-
-/* WHATSAPP FLOTANTE */
+/* WHATSAPP */
 .whatsapp-float {
   position: fixed;
   width: 55px;
-  /* Reducido */
   height: 55px;
   bottom: 25px;
-  /* Ajustado */
   right: 25px;
-  background-color: #25D366;
-  color: white;
+  background-color: #25d366;
+  color: #fff;
   border-radius: 50%;
-  /* Asegurar círculo perfecto */
   text-align: center;
   font-size: 28px;
-  /* Reducido */
-  box-shadow: 0 5px 15px rgba(37, 211, 102, 0.4);
-  /* Sombra más pronunciada */
+  box-shadow: 0 5px 15px rgba(37, 211, 102, .4);
   z-index: 1030;
-  /* Asegurar que esté sobre otros elementos */
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: all 0.3s ease;
+  transition: all .3s ease;
 }
 
 .whatsapp-float:hover {
-  background-color: #1DA851;
-  /* Verde más oscuro al hover */
+  background-color: #1da851;
   transform: scale(1.1) rotate(10deg);
-  /* Añadido rotate */
-  box-shadow: 0 8px 20px rgba(37, 211, 102, 0.5);
+  box-shadow: 0 8px 20px rgba(37, 211, 102, .5);
 }
 
 .whatsapp-float i {
   line-height: 1;
-  /* Para centrar mejor el ícono */
 }
 
-
-/* Ajustes responsivos generales */
-@media (max-width: 991.98px) {
+/* RESPONSIVE */
+@media (max-width:991.98px) {
   body {
     padding-top: 70px;
-    /* Ajustar si la navbar es más pequeña en tablet */
   }
 
   .hero-section {
     min-height: auto;
     padding: 120px 0 80px;
-    /* Padding para cuando no es 100vh */
     text-align: center;
-    /* Centrar texto en hero en tablet/móvil */
   }
 
   .hero-section .row>div {
     text-align: center;
-    /* Centrar columnas del hero */
   }
 
   .hero-title {
@@ -981,7 +910,6 @@ a:hover {
   }
 
   .experience-content {
-    /* Para sección "Quiénes Somos" */
     padding-right: 0;
     margin-bottom: 30px;
     text-align: center;
@@ -996,7 +924,6 @@ a:hover {
   }
 
   .footer .row>div {
-    /* Centrar columnas del footer en tablet */
     margin-bottom: 30px;
   }
 
@@ -1017,7 +944,7 @@ a:hover {
   }
 }
 
-@media (max-width: 767.98px) {
+@media (max-width:767.98px) {
   .hero-cta .btn {
     display: block;
     margin-left: auto;
@@ -1032,7 +959,6 @@ a:hover {
 
   .service-card {
     margin-bottom: 30px;
-    /* Espacio entre cards en móvil */
   }
 
   .experience-stats {
