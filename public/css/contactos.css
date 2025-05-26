@@ -1,4 +1,4 @@
-/* PALETA DE COLORES PREMIUM (Igual que en index.html) */
+/* PALETA DE COLORES PREMIUM */
 :root {
   --color-primary: #FF5E14;
   --color-primary-dark: #E04E0A;
@@ -14,7 +14,7 @@
   --color-accent: #f7931e;
 }
 
-/* ESTILOS GENERALES (Igual que en index.html) */
+/* ESTILOS GENERALES */
 body {
   font-family: 'Montserrat', sans-serif;
   background-color: var(--color-bg-dark);
@@ -31,12 +31,9 @@ h4,
 h5,
 h6 {
   font-family: 'Montserrat', sans-serif;
-  /* Cambio a Montserrat */
   font-weight: 700;
-  /* Ajustar según necesidad */
   color: var(--color-text);
   line-height: 1.3;
-  /* Ajustado para Montserrat */
 }
 
 a {
@@ -57,7 +54,7 @@ a:hover {
   color: var(--color-accent) !important;
 }
 
-/* NAVBAR PREMIUM (Igual que en index.html) */
+/* NAVBAR PREMIUM (Consistente) */
 .navbar {
   background-color: rgba(18, 18, 18, 0.85) !important;
   backdrop-filter: blur(12px);
@@ -74,7 +71,6 @@ a:hover {
 
 .logo-brand {
   font-family: 'Montserrat', sans-serif;
-  /* Cambio a Montserrat */
   font-size: 28px;
   font-weight: 800;
   color: var(--color-text) !important;
@@ -145,7 +141,7 @@ a:hover {
   transform: translateY(-2px);
 }
 
-/* ESTILOS COMUNES DE SECCIÓN (Igual que en index.html) */
+/* ESTILOS COMUNES DE SECCIÓN */
 .section-padding {
   padding: 80px 0;
 }
@@ -158,7 +154,6 @@ a:hover {
 .section-title-1 {
   font-size: clamp(2.2rem, 5vw, 3rem);
   font-weight: 700;
-  /* Ajustado para Montserrat */
   margin-bottom: 15px;
   position: relative;
   display: inline-block;
@@ -181,7 +176,6 @@ a:hover {
 /* HERO CONTACTO CON FORMULARIO */
 .contact-hero-section {
   background-color: var(--color-bg-dark);
-  /* Fondo principal oscuro */
   position: relative;
   overflow: hidden;
 }
@@ -189,7 +183,6 @@ a:hover {
 .hero-main-title {
   font-size: clamp(2.5rem, 6vw, 4rem);
   font-weight: 700;
-  /* Ajustado para Montserrat */
   color: var(--color-text);
   margin-bottom: 0.5em;
 }
@@ -212,7 +205,6 @@ a:hover {
 .contact-form-card {
   background-color: var(--color-secondary);
   padding: 40px;
-  /* Aumentado padding */
   border-radius: 15px;
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
   border: 1px solid var(--color-border);
@@ -220,41 +212,56 @@ a:hover {
 
 .form-title {
   font-family: 'Montserrat', sans-serif;
-  /* Cambio a Montserrat */
   color: var(--color-text);
   font-size: clamp(1.8rem, 4vw, 2.2rem);
   margin-bottom: 30px;
   font-weight: 700;
 }
 
-.form-floating>.form-control,
-.form-floating>.form-select {
+/* NUEVOS ESTILOS PARA LOS LABELS (ETIQUETAS) DEL FORMULARIO */
+.contact-form-card .form-label {
+  color: var(--color-text-muted);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 500; /* Opcional: ajusta el peso de la fuente si lo deseas */
+  margin-bottom: 0.5rem; /* Espacio entre la etiqueta y el campo de entrada */
+  display: block; /* Asegura que la etiqueta ocupe su propia línea */
+}
+
+/* ESTILOS AJUSTADOS PARA LOS CAMPOS DE ENTRADA Y SELECTS */
+.contact-form-card .form-control,
+.contact-form-card .form-select {
   background-color: var(--color-secondary-light);
   border: 1px solid var(--color-border);
   color: var(--color-text-light);
   border-radius: 8px;
-  /* Bordes más suaves */
 }
 
-.form-floating>.form-control:focus,
-.form-floating>.form-select:focus {
+.contact-form-card .form-control:focus,
+.contact-form-card .form-select:focus {
   background-color: var(--color-bg-light);
-  /* Ligeramente más claro al enfocar */
   border-color: var(--color-accent);
   box-shadow: 0 0 0 0.25rem rgba(247, 147, 30, 0.25);
   color: var(--color-text);
 }
 
+/* Los estilos para .form-floating > label ya no son necesarios: */
+/*
 .form-floating>label {
   color: var(--color-text-muted);
   font-family: 'Montserrat', sans-serif;
   font-size: 0.9rem;
 }
+*/
 
 .form-control::placeholder {
-  /* Estilo para placeholder */
   color: var(--color-text-muted);
   opacity: 0.7;
+  transition: opacity 0.2s ease;
+}
+
+.form-control:focus::placeholder {
+  opacity: 0;
 }
 
 .form-select {
@@ -285,7 +292,6 @@ a:hover {
 
 .invalid-feedback {
   color: var(--color-primary-light);
-  /* Mensajes de error más visibles */
   font-size: 0.85rem;
 }
 
@@ -296,18 +302,15 @@ a:hover {
 
 #formMessage .alert-success {
   background-color: rgba(247, 147, 30, 0.15);
-  /* Fondo naranja claro para éxito */
   color: var(--color-accent);
   border-color: var(--color-accent);
 }
 
 #formMessage .alert-danger {
   background-color: rgba(224, 78, 10, 0.15);
-  /* Fondo rojo claro para error */
   color: var(--color-primary-dark);
   border-color: var(--color-primary-dark);
 }
-
 
 /* CONTACT DETAILS SECTION */
 .contact-details-section {
@@ -334,11 +337,9 @@ a:hover {
 
 .contact-icon {
   font-size: 1.5rem;
-  /* Iconos más grandes */
   color: var(--color-accent);
   margin-right: 20px;
   width: 30px;
-  /* Ancho fijo para alineación */
   text-align: center;
   margin-top: 3px;
 }
@@ -375,7 +376,6 @@ a:hover {
 
 .map-container {
   height: 450px;
-  /* Altura del mapa ajustada */
   border-radius: 15px;
   overflow: hidden;
   border: 1px solid var(--color-border);
@@ -388,8 +388,7 @@ a:hover {
   border: none;
 }
 
-
-/* FOOTER PREMIUM (Igual que en index.html) */
+/* FOOTER PREMIUM (Consistente) */
 .footer {
   background-color: var(--color-secondary);
   padding: 70px 0 20px;
@@ -409,7 +408,6 @@ a:hover {
 
 .footer .logo-brand-1 {
   font-family: 'Montserrat', sans-serif;
-  /* Cambio a Montserrat */
   font-size: 28px;
   font-weight: 800;
   color: var(--color-text);
@@ -508,7 +506,7 @@ a:hover {
   font-size: 0.7em;
 }
 
-/* WHATSAPP FLOTANTE (Igual que en index.html) */
+/* WHATSAPP FLOTANTE (Consistente) */
 .whatsapp-float {
   position: fixed;
   width: 55px;
@@ -538,7 +536,7 @@ a:hover {
   line-height: 1;
 }
 
-/* SCROLLBAR PERSONALIZADA (Igual que en index.html) */
+/* SCROLLBAR PERSONALIZADA (Consistente) */
 ::-webkit-scrollbar {
   width: 8px;
 }
@@ -556,7 +554,6 @@ a:hover {
 ::-webkit-scrollbar-thumb:hover {
   background-color: var(--color-primary-dark);
 }
-
 
 /* RESPONSIVE ADJUSTMENTS */
 @media (max-width: 991.98px) {

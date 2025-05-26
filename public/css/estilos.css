@@ -223,104 +223,96 @@ a:hover {
   transform: translateY(-2px);
 }
 
-/* HERO SECTION DE LUJO - MEJORADO */
+/* HERO SECTION - Ajustes para VIDEO DE FONDO */
 .hero-section {
   position: relative;
   height: 100vh;
-  min-height: 700px;
-  overflow: hidden;
+  min-height: 700px; /* O la altura que prefieras */
+  overflow: hidden; /* Muy importante para que el video no se desborde */
   display: flex;
   align-items: center;
-  background-color: var(--color-bg-dark); /* Fondo oscuro base */
-  /* Considera una imagen de fondo sutil si Three.js no es suficiente */
-  /* background-image: linear-gradient(rgba(18,18,18,0.7), rgba(18,18,18,0.7)), url('tu-imagen-de-fondo-sutil.jpg'); */
-  /* background-size: cover; */
-  /* background-position: center; */
+  justify-content: center; /* Centra el contenedor del texto si es más pequeño que el hero */
+  background-color: var(--color-bg-dark); /* Color de fondo mientras carga el video */
 }
 
-/* Overlay para mejorar contraste del texto sobre la animación */
-.hero-section::before {
-  content: '';
+.hero-video-background {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%; /* Asegura que cubra todo el ancho */
+  min-height: 100%; /* Asegura que cubra todo el alto */
+  width: auto;
+  height: auto;
+  object-fit: cover; /* Cubre todo el espacio, puede recortar partes del video */
+  transform: translate(-50%, -50%);
+  z-index: 1; /* Detrás del overlay y el contenido de texto */
+  filter: brightness(0.7); /* Opcional: oscurecer un poco más el video (0.5 = 50% de brillo) */
+}
+
+.hero-video-overlay {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(18, 18, 18, 0.5); /* Overlay oscuro semitransparente */
-  z-index: 1; /* Detrás del contenido, encima de Three.js si se posiciona con z-index menor */
+  background-color: rgba(18, 18, 18, 0.65); /* Ajusta la opacidad (el último valor, 0.65 es 65%) */
+  z-index: 2; /* Encima del video, pero debajo del texto */
 }
 
+.hero-section > .container { /* El ">" es para seleccionar el container directo hijo */
+  position: relative; /* Asegura que el z-index funcione */
+  z-index: 3; /* Contenido de texto encima del video y el overlay */
+  padding-top: 60px; 
+  padding-bottom: 60px;
+}
 
-.hero-section .container {
+.hero-text-content {
   position: relative;
-  z-index: 2; /* Contenido del hero encima del overlay */
-}
-
-.hero-text-content { /* Nuevo div para agrupar texto y botones */
-    position: relative; /* Para z-index si es necesario */
-    z-index: 3; /* Asegurar que el texto esté al frente */
+  z-index: 3; 
 }
 
 .hero-title {
-  font-size: clamp(2.8rem, 7vw, 5rem); /* Ligeramente más grande y responsive */
-  font-weight: 800; /* Mantener o ajustar según Montserrat */
-  color: var(--color-text);
-  margin-bottom: 0.6em; /* Más espacio debajo del título */
-  line-height: 1.15;
-  text-shadow: 2px 2px 8px rgba(0,0,0,0.7); /* Sombra de texto más pronunciada */
+  font-size: clamp(2.8rem, 7vw, 4.8rem); 
+  font-weight: 800; 
+  color: var(--color-text); /* Color base del título (blanco) */
+  margin-bottom: 0.6em; 
+  line-height: 1.3; /* Aumentado para mejor espaciado entre múltiples líneas */
+  text-shadow: 2px 2px 10px rgba(0,0,0,0.8); 
 }
 
-.hero-title span {
-  color: var(--color-accent);
-  display: block; /* Hace que "en recuerdos eternos" pueda ir a una nueva línea naturalmente */
+/* Estilo para la parte del título que quieres resaltar en naranja */
+.hero-highlight-text {
+  color: var(--color-accent); /* Este será tu color naranja */
 }
 
 .hero-subtitle {
-  font-size: clamp(1.1rem, 2.8vw, 1.4rem); /* Ligeramente más grande */
+  font-size: clamp(1.1rem, 2.8vw, 1.5rem); 
   color: var(--color-text-light);
-  max-width: 550px; /* Ajustar si es necesario */
-  margin-top: 0; /* Quitar margen superior si .hero-title ya tiene suficiente mb */
-  margin-bottom: 35px; /* Más espacio antes de los botones */
+  max-width: 650px; 
+  margin: 0 auto 35px auto; 
   font-family: 'Montserrat', sans-serif;
   font-weight: 300;
-  line-height: 1.6;
-  text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
+  line-height: 1.7; 
+  text-shadow: 1px 1px 6px rgba(0,0,0,0.7);
 }
 
 .hero-cta .btn {
-  padding: 16px 38px; /* Botones un poco más grandes */
-  font-size: 1rem; /* Tamaño de fuente del botón */
-  margin-right: 15px; /* Espacio entre botones */
-  min-width: 200px; /* Ancho mínimo para los botones */
-  text-align: center;
-}
-.hero-cta .btn:last-child {
-    margin-right: 0;
-}
-
-
-#threejs-container {
-  position: absolute; /* Posicionar absolutamente para que no afecte el flujo del texto */
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 0; /* Detrás del overlay y el contenido */
-  opacity: 0.7; /* Reducir un poco la opacidad de la animación si es muy brillante */
+  padding: 16px 38px; 
+  font-size: 1rem; 
+  margin: 10px; 
+  min-width: 220px; 
 }
 
 .scroll-indicator {
-  /* ... (sin cambios, pero asegúrate que su z-index sea alto, ej. 3 o más) ... */
-  z-index: 3;
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: var(--color-accent);
+  font-size: 28px;
+  z-index: 4; 
+  animation: bounce 2.5s infinite;
 }
-
-/* Ajustes para la columna de texto y la de animación si es necesario */
-.hero-section .row > .col-lg-6:first-child { /* Columna del texto */
-    /* background: rgba(0,0,0,0.3);  Podrías añadir un fondo sutil solo a la columna de texto */
-    /* padding: 20px; */
-    /* border-radius: 10px; */
-}
-
 /* SECCIONES */
 .section-padding {
   padding: 80px 0;

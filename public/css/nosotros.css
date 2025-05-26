@@ -1,4 +1,4 @@
-/* PALETA DE COLORES PREMIUM (Igual que en index.html) */
+/* PALETA DE COLORES PREMIUM */
 :root {
   --color-primary: #FF5E14;
   --color-primary-dark: #E04E0A;
@@ -14,29 +14,21 @@
   --color-accent: #f7931e;
 }
 
-/* ESTILOS GENERALES (Igual que en index.html) */
+/* ESTILOS GENERALES */
 body {
   font-family: 'Montserrat', sans-serif;
   background-color: var(--color-bg-dark);
   color: var(--color-text-light);
   line-height: 1.7;
   overflow-x: hidden;
-  padding-top: 80px;
+  padding-top: 80px; 
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1,h2,h3,h4,h5,h6 {
   font-family: 'Montserrat', sans-serif;
-  /* Cambio a Montserrat */
   font-weight: 700;
-  /* Ajustar según necesidad */
   color: var(--color-text);
   line-height: 1.3;
-  /* Ajustado para Montserrat */
 }
 
 a {
@@ -44,20 +36,14 @@ a {
   transition: all 0.3s ease;
   color: var(--color-primary);
 }
-
 a:hover {
   color: var(--color-primary-light);
 }
 
-.text-primary {
-  color: var(--color-primary) !important;
-}
+.text-primary { color: var(--color-primary) !important; }
+.text-accent { color: var(--color-accent) !important; }
 
-.text-accent {
-  color: var(--color-accent) !important;
-}
-
-/* NAVBAR PREMIUM (Igual que en index.html) */
+/* NAVBAR PREMIUM (Consistente con index.html) */
 .navbar {
   background-color: rgba(18, 18, 18, 0.85) !important;
   backdrop-filter: blur(12px);
@@ -65,26 +51,19 @@ a:hover {
   border-bottom: 1px solid var(--color-border);
   transition: all 0.4s ease;
 }
-
 .navbar.scrolled {
   padding: 10px 0;
   background-color: rgba(18, 18, 18, 0.95) !important;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
 }
-
 .logo-brand {
   font-family: 'Montserrat', sans-serif;
-  /* Cambio a Montserrat */
   font-size: 28px;
   font-weight: 800;
   color: var(--color-text) !important;
   letter-spacing: 1px;
 }
-
-.logo-brand:hover {
-  color: var(--color-accent) !important;
-}
-
+.logo-brand:hover { color: var(--color-accent) !important; }
 .nav-link {
   font-weight: 600;
   font-size: 15px;
@@ -94,7 +73,6 @@ a:hover {
   position: relative;
   text-transform: uppercase;
 }
-
 .nav-link::before {
   content: '';
   position: absolute;
@@ -105,108 +83,56 @@ a:hover {
   background-color: var(--color-accent);
   transition: width 0.3s ease;
 }
-
-.nav-link:hover,
-.nav-link.active {
-  color: var(--color-text) !important;
-}
-
-.nav-link:hover::before,
-.nav-link.active::before {
-  width: calc(100% - 36px);
-}
-
-.navbar-toggler {
-  border-color: rgba(255, 255, 255, 0.1);
-}
-
-.navbar-toggler-icon {
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28247, 147, 30, 0.9%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
-}
-
+.nav-link:hover, .nav-link.active { color: var(--color-text) !important; }
+.nav-link:hover::before, .nav-link.active::before { width: calc(100% - 36px); }
+.navbar-toggler { border-color: rgba(255,255,255,0.1); }
+.navbar-toggler-icon { background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28247, 147, 30, 0.9%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e"); }
 .social-icons .social-icon {
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--color-text-muted);
-  margin: 0 5px;
-  transition: all 0.3s ease;
-  border: 1px solid var(--color-border);
-  font-size: 14px;
+  width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center;
+  color: var(--color-text-muted); margin: 0 5px; transition: all 0.3s ease;
+  border: 1px solid var(--color-border); font-size: 14px;
 }
-
 .social-icons .social-icon:hover {
-  background-color: var(--color-accent);
-  color: white;
-  border-color: var(--color-accent);
-  transform: translateY(-2px);
+  background-color: var(--color-accent); color: white; border-color: var(--color-accent); transform: translateY(-2px);
 }
 
-/* ESTILOS COMUNES DE SECCIÓN (Igual que en index.html) */
-.section-padding {
-  padding: 80px 0;
-}
-
-.section-header {
-  margin-bottom: 60px;
-  position: relative;
-}
-
+/* ESTILOS COMUNES DE SECCIÓN */
+.section-padding { padding: 80px 0; }
+.section-header { margin-bottom: 60px; position: relative; }
 .section-title-1 {
-  /* Título para secciones principales */
-  font-size: clamp(2.2rem, 5vw, 3rem);
-  font-weight: 700;
-  /* Ajustado para Montserrat */
-  margin-bottom: 15px;
-  position: relative;
-  display: inline-block;
-  color: var(--color-text);
+  font-size: clamp(2.2rem, 5vw, 3rem); font-weight: 700; margin-bottom: 15px;
+  position: relative; display: inline-block; color: var(--color-text);
 }
-
-.section-title-1 span {
-  color: var(--color-accent);
-}
-
+.section-title-1 span { color: var(--color-accent); }
 .section-subtitle-1 {
-  font-family: 'Montserrat', sans-serif;
-  font-size: clamp(1rem, 2vw, 1.1rem);
-  color: var(--color-text-muted);
-  max-width: 700px;
-  margin: 0 auto;
-  font-weight: 400;
+  font-family: 'Montserrat', sans-serif; font-size: clamp(1rem, 2vw, 1.1rem);
+  color: var(--color-text-muted); max-width: 700px; margin: 0 auto; font-weight: 400;
 }
 
 /* HERO SECTION NOSOTROS */
 .hero-section-nosotros {
-  background: linear-gradient(rgba(18, 18, 18, 0.85), rgba(18, 18, 18, 0.85)), url('https://placehold.co/1920x800/121212/FF5E14?text=Equipo+ISHUME+Abstract') no-repeat center center;
+  background: linear-gradient(rgba(18, 18, 18, 0.85), rgba(18, 18, 18, 0.85)), url('https://res.cloudinary.com/djhf5j068/image/upload/v1748231403/equipo-ishume-1920_vuhg2b.jpg') no-repeat center center;
   background-size: cover;
   color: var(--color-text);
-  padding: 120px 0;
-  min-height: 60vh;
+  padding: 100px 0; 
+  min-height: 50vh; 
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
 }
-
 .hero-section-nosotros .hero-title {
   color: var(--color-text);
-  font-size: clamp(2.8rem, 7vw, 4.5rem);
-  font-weight: 700;
-  /* Ajustado para Montserrat */
+  font-size: clamp(2.5rem, 6vw, 4rem); 
   margin-bottom: 0.5em;
+  font-weight: 700;
 }
-
 .hero-section-nosotros .hero-title span {
   color: var(--color-accent);
 }
-
 .hero-section-nosotros .hero-subtitle {
   font-family: 'Montserrat', sans-serif;
-  font-size: clamp(1.1rem, 3vw, 1.3rem);
+  font-size: clamp(1rem, 2.5vw, 1.25rem); 
   color: var(--color-text-light);
   max-width: 700px;
   margin-left: auto;
@@ -218,7 +144,6 @@ a:hover {
 .about-section {
   background-color: var(--color-bg-light);
 }
-
 .about-text {
   font-family: 'Montserrat', sans-serif;
   font-size: 1.05rem;
@@ -227,13 +152,12 @@ a:hover {
   margin-bottom: 1.5rem;
   font-weight: 300;
 }
-
 .video-container {
   border-radius: 15px;
   overflow: hidden;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  border: 1px solid var(--color-border);
 }
-
 .video-container iframe {
   width: 100%;
   height: 100%;
@@ -244,148 +168,121 @@ a:hover {
 .team-section {
   background-color: var(--color-bg-dark);
 }
-
 .team-card {
   background-color: var(--color-secondary);
   border-radius: 15px;
   overflow: hidden;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.2);
   transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  /* Efecto más elástico */
   height: 100%;
   border: 1px solid var(--color-border);
   display: flex;
   flex-direction: column;
 }
-
 .team-card:hover {
-  transform: translateY(-12px) scale(1.02);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.3);
   border-color: var(--color-accent);
 }
-
 .team-img-container {
-  height: 380px;
-  /* Altura fija para consistencia */
+  height: 360px; /* Altura ajustada para tarjeta más compacta */
   overflow: hidden;
   position: relative;
+  background-color: var(--color-secondary-light); 
 }
-
 .team-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center top;
-  /* Ajustar si las caras quedan cortadas */
+  /* Ajusta este valor para centrar la cara. Prueba 'center 10%', 'center 15%', 'center top', etc. */
+  object-position: center 20%; 
   transition: transform 0.5s ease, filter 0.5s ease;
 }
-
 .team-card:hover .team-img {
-  transform: scale(1.1);
-  filter: saturate(1.2);
+  transform: scale(1.08);
+  filter: saturate(1.1);
 }
-
 .team-info {
-  padding: 25px;
+  padding: 25px 20px; /* Padding ajustado */
   text-align: center;
   flex-grow: 1;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
-
 .team-name {
-  font-family: 'Montserrat', sans-serif;
-  /* Cambio a Montserrat */
-  font-size: 1.6rem;
+  font-family: 'Montserrat', sans-serif; 
+  font-size: 1.4rem; /* Reducido */
   font-weight: 700;
-  margin-bottom: 5px;
+  margin-bottom: 4px; /* Reducido */
   color: var(--color-text);
 }
-
 .team-position {
   color: var(--color-accent);
   font-weight: 600;
-  margin-bottom: 15px;
+  margin-bottom: 12px; /* Reducido */
   display: block;
   font-family: 'Montserrat', sans-serif;
-  font-size: 0.9rem;
+  font-size: 0.8rem; /* Reducido */
   text-transform: uppercase;
   letter-spacing: 0.5px;
 }
-
 .team-bio {
   color: var(--color-text-muted);
-  font-size: 0.9rem;
+  font-size: 0.85rem; /* Reducido para tarjeta más pequeña */
   font-family: 'Montserrat', sans-serif;
   font-weight: 300;
-  line-height: 1.6;
-  margin-bottom: 20px;
+  line-height: 1.6; /* Reducido */
+  margin-bottom: 15px; /* Reducido */
   flex-grow: 1;
 }
-
 .team-social {
   margin-top: auto;
-  /* Empuja los iconos sociales al final */
 }
-
 .team-social a {
   display: inline-block;
-  width: 38px;
-  height: 38px;
+  width: 35px; /* Reducido */
+  height: 35px; /* Reducido */
   border-radius: 50%;
-  background-color: rgba(255, 255, 255, 0.08);
+  background-color: rgba(255,255,255,0.08);
   color: var(--color-text-muted);
   text-align: center;
-  line-height: 38px;
-  margin: 0 6px;
+  line-height: 35px; /* Ajustar */
+  margin: 0 4px; /* Reducido */
   transition: all 0.3s ease;
-  font-size: 1rem;
+  font-size: 1rem; 
 }
-
 .team-social a:hover {
   background-color: var(--color-accent);
   color: white;
   transform: scale(1.1);
 }
 
-.team-leader {
-  position: relative;
-  z-index: 1;
-}
-
-.team-leader .team-card {
-  border: 2px solid var(--color-accent);
-}
-
-.team-leader .team-name {
-  font-size: 1.8rem;
-  color: var(--color-accent);
-}
-
+.team-leader { position: relative; z-index: 1; }
+.team-leader .team-card { border: 2px solid var(--color-accent); }
+.team-leader .team-name { font-size: 1.6rem; color: var(--color-accent); } /* Ajustado */
 .team-leader-badge {
   position: absolute;
-  top: -20px;
-  right: -20px;
+  top: -15px; 
+  right: -15px; 
   background-color: var(--color-accent);
   color: var(--color-secondary);
-  width: 55px;
-  height: 55px;
+  width: 45px; /* Reducido */
+  height: 45px; /* Reducido */
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.6rem;
+  font-size: 1.3rem; /* Reducido */
   z-index: 2;
-  box-shadow: 0 5px 15px rgba(247, 147, 30, 0.3);
-  border: 3px solid var(--color-bg-dark);
+  box-shadow: 0 4px 12px rgba(247, 147, 30, 0.3); /* Sombra ajustada */
+  border: 2px solid var(--color-bg-dark); 
 }
 
 /* VALUES SECTION */
 .values-section {
   background-color: var(--color-bg-light);
 }
-
 .value-card {
   background-color: var(--color-secondary);
   border-radius: 15px;
@@ -398,14 +295,12 @@ a:hover {
   flex-direction: column;
   align-items: center;
 }
-
 .value-card:hover {
   background-color: var(--color-secondary-light);
   border-color: var(--color-accent);
   transform: translateY(-8px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
 }
-
 .value-icon {
   font-size: 2.8rem;
   color: var(--color-accent);
@@ -413,19 +308,16 @@ a:hover {
   line-height: 1;
   transition: transform 0.3s ease;
 }
-
 .value-card:hover .value-icon {
-  transform: scale(1.1) rotate(-5deg);
+    transform: scale(1.1) rotate(-5deg);
 }
-
 .value-title {
   font-family: 'Montserrat', sans-serif;
-  font-size: 1.4rem;
+  font-size: 1.3rem; 
   font-weight: 600;
   margin-bottom: 15px;
   color: var(--color-text);
 }
-
 .value-text {
   color: var(--color-text-muted);
   font-size: 0.9rem;
@@ -435,235 +327,116 @@ a:hover {
   flex-grow: 1;
 }
 
-/* FOOTER PREMIUM (Igual que en index.html) */
-.footer {
-  background-color: var(--color-secondary);
-  padding: 70px 0 20px;
-  position: relative;
-  font-family: 'Montserrat', sans-serif;
-}
-
-.footer::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 2px;
-  background: var(--color-accent);
-}
-
-.footer .logo-brand-1 {
-  font-family: 'Montserrat', sans-serif;
-  /* Cambio a Montserrat */
-  font-size: 28px;
-  font-weight: 800;
-  color: var(--color-text);
-  margin-bottom: 15px;
-  display: inline-block;
-}
-
-.footer .logo-brand-1:hover {
-  color: var(--color-accent);
-}
-
-.footer p {
-  color: var(--color-text-muted);
-  font-size: 0.9rem;
-  line-height: 1.6;
-}
-
-.footer-links h4,
-.footer-contact h4 {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 1.1rem;
-  font-weight: 600;
-  margin-bottom: 20px;
-  color: var(--color-text);
-  position: relative;
-  padding-bottom: 10px;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-}
-
-.footer-links h4::after,
-.footer-contact h4::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 30px;
-  height: 2px;
-  background-color: var(--color-accent);
-}
-
-.footer-links ul,
-.footer-contact ul {
-  list-style: none;
-  padding: 0;
-}
-
-.footer-links li,
-.footer-contact li {
-  margin-bottom: 10px;
-}
-
-.footer-links a,
-.footer-contact a {
-  color: var(--color-text-muted);
-  font-size: 0.9rem;
-  transition: all 0.3s ease;
-}
-
-.footer-links a:hover,
-.footer-contact a:hover {
-  color: var(--color-accent);
-  padding-left: 5px;
-}
-
-.footer-contact i {
-  color: var(--color-accent);
-  margin-right: 8px;
-  width: 20px;
-}
-
-.social-icons-footer .social-icon {
-  width: 38px;
-  height: 38px;
-  background-color: rgba(255, 255, 255, 0.05);
-  color: var(--color-text-muted);
-  border: 1px solid var(--color-border);
-}
-
-.social-icons-footer .social-icon:hover {
-  background-color: var(--color-accent);
-  color: white;
+.btn-primary {
+  background-color: var(--color-accent); /* Este es tu naranja #f7931e */
   border-color: var(--color-accent);
+  color: var(--color-secondary); /* Texto oscuro para contraste con fondo naranja */
+  font-weight: 600;
+  padding: 12px 28px;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 14px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
 }
 
+.btn-primary:hover {
+  background-color: var(--color-primary-dark); /* Naranja más oscuro al pasar el cursor */
+  border-color: var(--color-primary-dark);
+  color: white; /* Texto blanco al pasar el cursor */
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(247, 147, 30, 0.3);
+}
+
+/* FOOTER PREMIUM (Consistente con index.html) */
+.footer {
+  background-color: var(--color-secondary); padding: 70px 0 20px; position: relative; font-family: 'Montserrat', sans-serif;
+}
+.footer::before {
+  content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 2px; background: var(--color-accent);
+}
+.footer .logo-brand-1 {
+  font-family: 'Montserrat', sans-serif; font-size: 28px; font-weight: 800;
+  color: var(--color-text); margin-bottom: 15px; display: inline-block;
+}
+.footer .logo-brand-1:hover { color: var(--color-accent); }
+.footer p { color: var(--color-text-muted); font-size: 0.9rem; line-height: 1.6; }
+.footer-links h4, .footer-contact h4 {
+  font-family: 'Montserrat', sans-serif; font-size: 1.1rem; font-weight: 600; margin-bottom: 20px;
+  color: var(--color-text); position: relative; padding-bottom: 10px; text-transform: uppercase; letter-spacing: 0.5px;
+}
+.footer-links h4::after, .footer-contact h4::after {
+  content: ''; position: absolute; bottom: 0; left: 0; width: 30px; height: 2px; background-color: var(--color-accent);
+}
+.footer-links ul, .footer-contact ul { list-style: none; padding: 0; }
+.footer-links li, .footer-contact li { margin-bottom: 10px; }
+.footer-links a, .footer-contact a { color: var(--color-text-muted); font-size: 0.9rem; transition: all 0.3s ease; }
+.footer-links a:hover, .footer-contact a:hover { color: var(--color-accent); padding-left: 5px; }
+.footer-contact i { color: var(--color-accent); margin-right: 8px; width: 20px; }
+.social-icons-footer .social-icon {
+  width: 38px; height: 38px; background-color: rgba(255,255,255,0.05);
+  color: var(--color-text-muted); border: 1px solid var(--color-border);
+}
+.social-icons-footer .social-icon:hover { background-color: var(--color-accent); color: white; border-color: var(--color-accent); }
 .footer-bottom {
-  text-align: center;
-  margin-top: 50px;
-  border-top: 1px solid var(--color-border);
-  padding-top: 30px;
-  color: var(--color-text-muted);
-  font-size: 0.85rem;
+  text-align: center; margin-top: 50px; border-top: 1px solid var(--color-border);
+  padding-top: 30px; color: var(--color-text-muted); font-size: 0.85rem;
 }
+.footer-bottom p sup { font-size: 0.7em; }
 
-.footer-bottom p sup {
-  font-size: 0.7em;
-}
-
-/* WHATSAPP FLOTANTE (Igual que en index.html) */
+/* WHATSAPP FLOTANTE (Consistente con index.html) */
 .whatsapp-float {
-  position: fixed;
-  width: 55px;
-  height: 55px;
-  bottom: 25px;
-  right: 25px;
-  background-color: #25D366;
-  color: white;
-  border-radius: 50%;
-  text-align: center;
-  font-size: 28px;
-  box-shadow: 0 5px 15px rgba(37, 211, 102, 0.4);
-  z-index: 1030;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  position: fixed; width: 55px; height: 55px; bottom: 25px; right: 25px;
+  background-color: #25D366; color: white; border-radius: 50%; text-align: center;
+  font-size: 28px; box-shadow: 0 5px 15px rgba(37, 211, 102, 0.4);
+  z-index: 1030; display: flex; align-items: center; justify-content: center;
   transition: all 0.3s ease;
 }
-
 .whatsapp-float:hover {
-  background-color: #1DA851;
-  transform: scale(1.1) rotate(10deg);
+  background-color: #1DA851; transform: scale(1.1) rotate(10deg);
   box-shadow: 0 8px 20px rgba(37, 211, 102, 0.5);
 }
+.whatsapp-float i { line-height: 1; }
 
-.whatsapp-float i {
-  line-height: 1;
-}
-
-/* SCROLLBAR PERSONALIZADA (Igual que en index.html) */
-::-webkit-scrollbar {
-  width: 8px;
-}
-
-::-webkit-scrollbar-track {
-  background: var(--color-bg-dark);
-}
-
+/* SCROLLBAR PERSONALIZADA (Consistente con index.html) */
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: var(--color-bg-dark); }
 ::-webkit-scrollbar-thumb {
-  background-color: var(--color-accent);
-  border-radius: 10px;
-  border: 2px solid var(--color-bg-dark);
+  background-color: var(--color-accent); border-radius: 10px; border: 2px solid var(--color-bg-dark);
 }
-
-::-webkit-scrollbar-thumb:hover {
-  background-color: var(--color-primary-dark);
-}
+::-webkit-scrollbar-thumb:hover { background-color: var(--color-primary-dark); }
 
 
 /* RESPONSIVE ADJUSTMENTS */
 @media (max-width: 991.98px) {
-  body {
-    padding-top: 70px;
-  }
-
-  .hero-section-nosotros {
-    min-height: 50vh;
-    padding: 100px 0;
-  }
-
-  .team-img-container {
-    height: 320px;
-  }
-
-  .footer .row>div {
-    margin-bottom: 30px;
-  }
-
-  .footer-links h4,
-  .footer-contact h4 {
-    text-align: center;
-  }
-
-  .footer-links h4::after,
-  .footer-contact h4::after {
-    left: 50%;
-    transform: translateX(-50%);
-  }
-
-  .footer-links ul,
-  .footer-contact ul {
-    text-align: center;
-  }
+  body { padding-top: 70px; }
+  .hero-section-nosotros { min-height: 40vh; padding: 80px 0; } 
+  .team-img-container { height: 320px; } 
+  .team-leader { max-width: 70%; } 
+  .footer .row > div { margin-bottom: 30px; }
+  .footer-links h4, .footer-contact h4 { text-align: center; }
+  .footer-links h4::after, .footer-contact h4::after { left: 50%; transform: translateX(-50%); }
+  .footer-links ul, .footer-contact ul { text-align: center; }
 }
 
 @media (max-width: 767.98px) {
-  .team-img-container {
-    height: 350px;
-  }
+  .hero-section-nosotros .hero-title { font-size: clamp(2rem, 5vw, 3rem); } 
+  .hero-section-nosotros .hero-subtitle { font-size: clamp(0.9rem, 2.5vw, 1.1rem); } 
+  .team-img-container { height: 350px; } 
+  .team-leader { max-width: 80%; } 
+  .values-section .value-card { padding: 30px 20px; } 
+  .footer { text-align: center; }
+  .footer-brand .logo-brand-1 { text-align: center; }
+  .social-icons-footer { justify-content: center; }
+}
 
-  .team-leader {
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 450px;
-  }
-
-  .values-section .value-card {
-    padding: 30px 20px;
-  }
-
-  .footer {
-    text-align: center;
-  }
-
-  .footer-brand .logo-brand-1 {
-    text-align: center;
-  }
-
-  .social-icons-footer {
-    justify-content: center;
-  }
+@media (max-width: 575px) {
+    .team-leader { max-width: 95%; } 
+    .team-img-container { height: 320px; } 
+    .team-name { font-size: 1.3rem; }
+    .team-position { font-size: 0.75rem; }
+    .team-bio { font-size: 0.75rem; }
+    .team-social a { width: 30px; height: 30px; line-height: 30px; font-size: 0.8rem; }
+    .team-leader-badge { width: 40px; height: 40px; font-size: 1.1rem; top: -15px; right: -10px; }
 }

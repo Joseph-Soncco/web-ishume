@@ -11,16 +11,11 @@
     content="contacto productora audiovisual chincha, cotizar video chincha, cotizar fotografia chincha, telefono ishume, email ishume" />
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
-
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
-
-  <link
-    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Playfair+Display:wght@700;800&display=swap"
-    rel="stylesheet" />
-  
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-
-  <link rel="stylesheet" href="css/contactos.css" /> <link rel="icon" href="/images/SVG/icon-is.png" /> </head>
+  <link rel="stylesheet" href="css/contactos.css" />
+  <link rel="icon" href="/images/SVG/icon-is.png" /> </head>
 
 <body>
   <header>
@@ -72,50 +67,41 @@
               <form id="contactForm" novalidate>
                 <div class="row gx-3 gy-4">
                   <div class="col-md-6">
-                    <div class="form-floating">
-                      <input type="text" id="nombre" class="form-control" placeholder="Tu Nombre Completo" required>
-                      <label for="nombre">Nombre Completo*</label>
-                      <div class="invalid-feedback">Por favor, ingresa tu nombre.</div>
-                    </div>
+                    <label for="nombre" class="form-label">Nombre Completo*</label>
+                    <input type="text" id="nombre" class="form-control" placeholder="Tu Nombre Completo" required>
+                    <div class="invalid-feedback">Por favor, ingresa tu nombre.</div>
                   </div>
                   <div class="col-md-6">
-                    <div class="form-floating">
-                      <input type="email" id="email" class="form-control" placeholder="tu@email.com" required>
-                      <label for="email">Correo Electrónico*</label>
-                      <div class="invalid-feedback">Por favor, ingresa un email válido.</div>
-                    </div>
+                    <label for="email" class="form-label">Correo Electrónico (Opcional)</label>
+                    <input type="email" id="email" class="form-control" placeholder="tu@email.com">
                   </div>
                   <div class="col-md-6">
-                    <div class="form-floating">
-                      <input type="tel" id="telefono" class="form-control" placeholder="(+51) 987 654 321">
-                      <label for="telefono">Teléfono (Opcional)</label>
-                    </div>
+                    <label for="telefono" class="form-label">Teléfono*</label>
+                    <input type="tel" id="telefono" class="form-control" placeholder="987654321" required pattern="\d{9}">
+                    <div class="invalid-feedback">Por favor, ingresa un número de teléfono válido de 9 dígitos.</div>
                   </div>
                   <div class="col-md-6">
-                    <div class="form-floating">
-                      <select id="servicio" class="form-select" aria-label="Servicio de interés">
-                        <option value="" selected>Selecciona un servicio...</option>
-                        <option value="Fotografia Profesional">Fotografía Profesional</option>
-                        <option value="Produccion de Video">Producción de Video</option>
-                        <option value="Bodas">Bodas</option>
-                        <option value="Quinceaneras">Quinceañeras</option>
-                        <option value="Eventos Sociales">Eventos Sociales (Cumpleaños, Bautizos)</option>
-                        <option value="Baby Shower">Baby Shower</option>
-                        <option value="Infantil">Sesiones Infantiles</option>
-                        <option value="Corporativo y Promocion">Corporativo y Promoción</option>
-                        <option value="Drone">Tomas con Drone</option>
-                        <option value="Otro">Otro Servicio</option>
-                      </select>
-                      <label for="servicio">Servicio de Interés</label>
-                    </div>
+                    <label for="servicio" class="form-label">Servicio de Interés*</label>
+                    <select id="servicio" class="form-select" aria-label="Servicio de interés" required>
+                      <option value="" selected disabled>Selecciona un servicio*</option>
+                      <option value="Fotografia Profesional">Fotografía Profesional</option>
+                      <option value="Produccion de Video">Producción de Video</option>
+                      <option value="Bodas">Bodas</option>
+                      <option value="Quinceaneras">Quinceañeras</option>
+                      <option value="Eventos Sociales">Eventos Sociales (Cumpleaños, Bautizos)</option>
+                      <option value="Baby Shower">Baby Shower</option>
+                      <option value="Infantil">Sesiones Infantiles</option>
+                      <option value="Corporativo y Promocion">Corporativo y Promoción</option>
+                      <option value="Drone">Tomas con Drone</option>
+                      <option value="Otro">Otro Servicio</option>
+                    </select>
+                    <div class="invalid-feedback">Por favor, selecciona un servicio.</div>
                   </div>
                   <div class="col-12">
-                    <div class="form-floating">
-                      <textarea id="mensaje" class="form-control" placeholder="Cuéntanos sobre tu proyecto..."
-                        style="height: 150px" required></textarea>
-                      <label for="mensaje">Tu Mensaje*</label>
-                      <div class="invalid-feedback">Por favor, déjanos un mensaje.</div>
-                    </div>
+                    <label for="mensaje" class="form-label">Tu Mensaje*</label>
+                    <textarea id="mensaje" class="form-control" placeholder="Cuéntanos sobre tu proyecto..."
+                      style="height: 150px" required></textarea>
+                    <div class="invalid-feedback">Por favor, déjanos un mensaje.</div>
                   </div>
                   <div class="col-12 text-center">
                     <button type="submit" class="btn btn-primary btn-lg form-submit-button">
@@ -146,7 +132,7 @@
                             <div class="contact-text">
                                 <h4>Nuestra Ubicación</h4>
                                 <p>Av. Luis Massaro 805, Chincha Alta, Ica, Perú</p>
-                                <p><a href="https://maps.app.goo.gl/dZWq28E7vGpEMPRD9" target="_blank" class="text-accent">Ver en Google Maps</a></p>
+                                <p><a href="https://maps.app.goo.gl/rApJqcnRh6XPWSHM9" target="_blank" class="text-accent">Ver en Google Maps</a></p>
                             </div>
                         </div>
                         <div class="contact-item">
@@ -183,7 +169,7 @@
                 <div class="col-lg-6" data-aos="fade-left">
                     <div class="map-container">
                         <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3879.275423635099!2d-76.13461132399699!3d-13.507288086807535!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91106dd5a3021a9d%3A0x91b79e206a287808!2sAv%20Luis%20Massaro%20805%2C%20Chincha%20Alta%2011702!5e0!3m2!1ses-419!2spe!4v1716665000000!5m2!1ses-419!2spe"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3879.139065179904!2d-76.1358206856872!3d-13.428490990492275!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x911016f1a0555555%3A0x730a0a3796751621!2sAv.%20Luis%20Massaro%20805%2C%20Chincha%20Alta%2011701!5e0!3m2!1ses-419!2spe!4v1678888888888!5m2!1ses-419!2spe" /* REEMPLAZA CON TU IFRAME DE GOOGLE MAPS */
                             width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
                             referrerpolicy="no-referrer-when-downgrade" title="Ubicación de ISHUME Productora Audiovisual en Chincha"></iframe>
                     </div>
@@ -235,7 +221,7 @@
                 <a href="https://www.facebook.com/share/1RpNuWeJy7/" target="_blank" class="social-icon me-2" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
                 <a href="https://www.instagram.com/ishume_productora_audiovisual" target="_blank" class="social-icon me-2" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
                 <a href="https://wa.me/51991157028" target="_blank" class="social-icon" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
-                </div>
+            </div>
           </div>
         </div>
       </div>
@@ -252,5 +238,6 @@
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script src="js/contactos.js"></script> </body>
+  <script src="js/contactos.js"></script>
+</body>
 </html>

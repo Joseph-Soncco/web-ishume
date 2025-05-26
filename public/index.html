@@ -63,12 +63,17 @@
 
   <main>
     <section class="hero-section">
-      <div id="threejs-container" class="d-none d-lg-block"></div>
+      <div class="hero-video-overlay"></div>
+
+      <video autoplay muted loop playsinline class="hero-video-background" poster="URL_A_TU_IMAGEN_POSTER.jpg">
+        <source src="URL_A_TU_VIDEO_OPTIMIZADO.mp4" type="video/mp4">
+        Tu navegador no soporta videos HTML5.
+      </video>
     
       <div class="container h-100">
         <div class="row h-100 align-items-center">
-          <div class="col-lg-7 col-md-10 mx-auto mx-lg-0 text-center text-lg-start"> {/* Ajuste de columnas y alineación */}
-            <div class="hero-text-content"> {/* Nuevo div contenedor para el texto */}
+          <div class="col-lg-7 col-md-10 mx-auto mx-lg-0 text-center text-lg-start">
+            <div class="hero-text-content">
               <h1 class="hero-title" data-aos="fade-up" data-aos-delay="100">
                 Transformamos momentos <span>en recuerdos eternos</span>
               </h1>
